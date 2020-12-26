@@ -1,0 +1,14 @@
+micronaut:
+  application:
+    name: nativeMicronautApi
+datasources:
+  default:
+    url: ${DATASOURCE_URL}
+    driverClassName: org.postgresql.Driver
+    username: ${DATASOURCE_USERNAME}
+    password: ${DATASOURCE_PASSWORD}
+    schema-generate: CREATE_DROP
+    dialect: POSTGRES
+jpa.default.properties.hibernate.hbm2ddl.auto: update
+
+

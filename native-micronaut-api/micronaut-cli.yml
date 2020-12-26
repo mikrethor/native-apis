@@ -1,0 +1,6 @@
+applicationType: default
+defaultPackage: com.lafabrique.digit.owl
+testFramework: junit
+sourceLanguage: kotlin
+buildTool: maven
+features: [annotation-api, app-name, data, data-jpa, graalvm, http-client, jdbc-hikari, junit, kotlin, kotlin-application, kotlin-extension-functions, logback, maven, netty-server, postgres, readme, shade, testcontainers, yaml]

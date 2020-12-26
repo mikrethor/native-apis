@@ -1,0 +1,21 @@
+version: '3.1'
+services:
+  jpamicro:
+    image: native-micronaut-api:latest
+    ports:
+      - "8080:8080"
+    build:
+      context: .
+    container_name: jpamicro
+    depends_on:
+      - dbmicro
+    environment:
+      - DATASOURCE_URL=jdbc:postgresql://dbmicro:5432/compose-postgres
+      - DATASOURCE_USERNAME=compose-postgres
+      - DATASOURCE_PASSWORD=compose-postgres
+  dbmicro:
+    image: 'postgres:13.1'
+    container_name: dbmicro
+    environment:
+      - POSTGRES_USER=compose-postgres
+      - POSTGRES_PASSWORD=compose-postgres
