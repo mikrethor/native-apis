@@ -1,13 +1,17 @@
 package com.lafabrique.digit.owl
 
+import com.fasterxml.jackson.annotation.JsonIdentityInfo
+import com.fasterxml.jackson.annotation.ObjectIdGenerators
 import org.hibernate.annotations.GenericGenerator
 import org.springframework.data.annotation.Id
 import java.util.*
 import javax.persistence.Entity
 import javax.persistence.GeneratedValue
+import javax.persistence.ManyToMany
 
 @Entity
-class Todo {
+@JsonIdentityInfo(generator= ObjectIdGenerators.PropertyGenerator::class, property="id")
+class Movie {
 
     @javax.persistence.Id
     @Id
@@ -16,5 +20,8 @@ class Todo {
     var id: UUID? = null
 
     var title: String = ""
-    var completed: Boolean = false
+    var year: Int = 0
+
+    @ManyToMany(mappedBy = "movies")
+    var actors: MutableSet<Actor>? = mutableSetOf()
 }

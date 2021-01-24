@@ -11,15 +11,13 @@ import org.testcontainers.containers.PostgreSQLContainer
 
 class PostgresSQLExtension : BeforeAllCallback, AfterAllCallback {
 
-    internal class SpecifiedPostgresSQLContainer(val imageName: String) : PostgreSQLContainer<SpecifiedPostgresSQLContainer>(imageName)
-
-    private val container: SpecifiedPostgresSQLContainer? = null
+    internal class SpecifiedPostgresSQLContainer(imageName: String) : PostgreSQLContainer<SpecifiedPostgresSQLContainer>(imageName)
 
     companion object {
         private val postgresSQLServer = SpecifiedPostgresSQLContainer("postgres:13.1")
                 .withDatabaseName("integration-tests-db")
                 .withUsername("sa")
-                .withPassword("sa");
+                .withPassword("sa")
 
     }
 

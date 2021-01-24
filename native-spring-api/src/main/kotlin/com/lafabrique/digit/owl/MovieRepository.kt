@@ -5,7 +5,7 @@ import org.springframework.stereotype.Repository
 import java.util.*
 
 @Repository
-interface TodoRepository : JpaRepository<Todo, UUID> {
+interface MovieRepository : JpaRepository<Movie, UUID> {
 
-    fun findByTitle(title: String): List<Todo>
+    fun findByTitle(title: String): List<Movie>
 }

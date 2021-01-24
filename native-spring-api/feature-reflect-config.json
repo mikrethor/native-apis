@@ -66,12 +66,44 @@
     "allDeclaredConstructors": true
   },
   {
+    "name": "com.lafabrique.digit.owl.Actor",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true,
+    "allPublicMethods": true,
+    "allDeclaredClasses": true
+  },
+  {
+    "name": "com.lafabrique.digit.owl.ActorController",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true,
+    "allPublicMethods": true,
+    "allDeclaredClasses": true
+  },
+  {
+    "name": "com.lafabrique.digit.owl.ActorRepository",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true,
+    "allPublicMethods": true,
+    "allDeclaredClasses": true
+  },
+  {
+    "name": "com.lafabrique.digit.owl.ActorService",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true,
+    "allPublicMethods": true,
+    "allDeclaredClasses": true
+  },
+  {
     "name": "com.lafabrique.digit.owl.JvmApiApplication",
     "allDeclaredFields": true,
     "allDeclaredConstructors": true
   },
   {
-    "name": "com.lafabrique.digit.owl.Todo",
+    "name": "com.lafabrique.digit.owl.Movie",
     "allDeclaredFields": true,
     "allDeclaredConstructors": true,
     "allDeclaredMethods": true,
@@ -79,7 +111,7 @@
     "allDeclaredClasses": true
   },
   {
-    "name": "com.lafabrique.digit.owl.TodoController",
+    "name": "com.lafabrique.digit.owl.MovieController",
     "allDeclaredFields": true,
     "allDeclaredConstructors": true,
     "allDeclaredMethods": true,
@@ -87,7 +119,7 @@
     "allDeclaredClasses": true
   },
   {
-    "name": "com.lafabrique.digit.owl.TodoRepository",
+    "name": "com.lafabrique.digit.owl.MovieRepository",
     "allDeclaredFields": true,
     "allDeclaredConstructors": true,
     "allDeclaredMethods": true,
@@ -95,7 +127,7 @@
     "allDeclaredClasses": true
   },
   {
-    "name": "com.lafabrique.digit.owl.TodoService",
+    "name": "com.lafabrique.digit.owl.MovieService",
     "allDeclaredFields": true,
     "allDeclaredConstructors": true,
     "allDeclaredMethods": true,
@@ -103,12 +135,29 @@
     "allDeclaredClasses": true
   },
   {
-    "name": "com.mongodb.MongoClientSettings",
+    "name": "com.zaxxer.hikari.HikariConfig",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "com.zaxxer.hikari.HikariConfigMXBean",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "com.zaxxer.hikari.HikariDataSource",
     "allDeclaredConstructors": true
   },
   {
-    "name": "com.mongodb.client.MongoClient",
-    "allDeclaredConstructors": true
+    "name": "com.zaxxer.hikari.util.ConcurrentBag$IConcurrentBagEntry",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "com.zaxxer.hikari.util.ConcurrentBag$IConcurrentBagEntry[]"
   },
   {
     "name": "io.netty.channel.ChannelHandler",
@@ -143,12 +192,6 @@
     "name": "java.io.Serializable[]"
   },
   {
-    "name": "java.lang.CharSequence",
-    "allDeclaredFields": true,
-    "allDeclaredConstructors": true,
-    "allPublicMethods": true
-  },
-  {
     "name": "java.lang.CharSequence[]"
   },
   {
@@ -161,22 +204,10 @@
     "name": "java.lang.Comparable[]"
   },
   {
-    "name": "java.lang.Iterable",
-    "allDeclaredFields": true,
-    "allDeclaredConstructors": true,
-    "allDeclaredMethods": true
-  },
-  {
     "name": "java.lang.Object",
     "allDeclaredFields": true,
     "allDeclaredConstructors": true,
     "allDeclaredMethods": true,
-    "allPublicMethods": true
-  },
-  {
-    "name": "java.lang.String",
-    "allDeclaredFields": true,
-    "allDeclaredConstructors": true,
     "allPublicMethods": true
   },
   {
@@ -218,8 +249,40 @@
     ]
   },
   {
+    "name": "java.sql.DatabaseMetaData",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "methods": [
+      {
+        "name": "getDatabaseProductName",
+        "parameterTypes": []
+      }
+    ]
+  },
+  {
+    "name": "java.sql.Statement",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "java.sql.Statement[]"
+  },
+  {
     "name": "java.util.ArrayList",
     "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "java.util.EventListener",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true,
+    "allPublicMethods": true
+  },
+  {
+    "name": "java.util.EventObject",
     "allDeclaredConstructors": true,
     "allDeclaredMethods": true
   },
@@ -231,6 +294,12 @@
   },
   {
     "name": "java.util.Properties"
+  },
+  {
+    "name": "java.util.UUID",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allPublicMethods": true
   },
   {
     "name": "java.util.concurrent.Callable",
@@ -257,6 +326,70 @@
     "allDeclaredMethods": true
   },
   {
+    "name": "javax.persistence.Column",
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "javax.persistence.Entity",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true,
+    "allPublicMethods": true
+  },
+  {
+    "name": "javax.persistence.EntityManager",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "javax.persistence.EntityManagerFactory",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "javax.persistence.GeneratedValue",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "javax.persistence.Id",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "javax.persistence.JoinColumn",
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "javax.persistence.ManyToOne",
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "javax.persistence.MappedSuperclass",
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "javax.persistence.PersistenceContext",
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "javax.persistence.Table",
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "javax.persistence.TableGenerator",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "javax.persistence.Transient",
+    "allDeclaredMethods": true
+  },
+  {
     "name": "javax.servlet.MultipartConfigElement",
     "allDeclaredConstructors": true
   },
@@ -268,6 +401,19 @@
   },
   {
     "name": "javax.servlet.ServletRequest"
+  },
+  {
+    "name": "javax.sql.DataSource",
+    "allDeclaredConstructors": true
+  },
+  {
+    "name": "javax.sql.XADataSource"
+  },
+  {
+    "name": "javax.transaction.Transaction"
+  },
+  {
+    "name": "javax.transaction.TransactionManager"
   },
   {
     "name": "javax.transaction.Transactional",
@@ -315,10 +461,717 @@
     "allDeclaredMethods": true
   },
   {
+    "name": "org.apache.logging.log4j.message.DefaultFlowMessageFactory",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.apache.logging.log4j.message.ParameterizedMessageFactory",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.apache.logging.log4j.message.ReusableMessageFactory",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
     "name": "org.apache.tomcat.util.descriptor.web.ErrorPage",
     "allDeclaredFields": true,
     "allDeclaredConstructors": true,
     "allDeclaredMethods": true
+  },
+  {
+    "name": "org.aspectj.lang.annotation.Around",
+    "allDeclaredConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name": "org.aspectj.weaver.Advice"
+  },
+  {
+    "name": "org.hibernate.Session",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.hibernate.annotations.Tuplizer",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.hibernate.annotations.common.util.impl.Log",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.hibernate.annotations.common.util.impl.Log_$logger",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.hibernate.bytecode.enhance.internal.tracker.DirtyTracker",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.hibernate.bytecode.enhance.spi.CollectionTracker",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.hibernate.bytecode.enhance.spi.LazyPropertyInitializer$InterceptorImplementor",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.hibernate.cache.spi.access.CollectionDataAccess",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.hibernate.dialect.H2Dialect",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.hibernate.dialect.MySQLDialect",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.hibernate.engine.spi.EntityEntry",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.hibernate.engine.spi.ExtendedSelfDirtinessTracker",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true,
+    "allPublicMethods": true
+  },
+  {
+    "name": "org.hibernate.engine.spi.Managed",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true,
+    "allPublicMethods": true
+  },
+  {
+    "name": "org.hibernate.engine.spi.ManagedEntity",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true,
+    "allPublicMethods": true
+  },
+  {
+    "name": "org.hibernate.engine.spi.PersistentAttributeInterceptable",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true,
+    "allPublicMethods": true
+  },
+  {
+    "name": "org.hibernate.engine.spi.PersistentAttributeInterceptor",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.hibernate.engine.spi.SelfDirtinessTracker",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true,
+    "allPublicMethods": true
+  },
+  {
+    "name": "org.hibernate.engine.spi.SessionImplementor"
+  },
+  {
+    "name": "org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.hibernate.event.spi.AutoFlushEventListener",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.hibernate.event.spi.AutoFlushEventListener[]"
+  },
+  {
+    "name": "org.hibernate.event.spi.ClearEventListener",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.hibernate.event.spi.ClearEventListener[]"
+  },
+  {
+    "name": "org.hibernate.event.spi.DeleteEventListener",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.hibernate.event.spi.DeleteEventListener[]"
+  },
+  {
+    "name": "org.hibernate.event.spi.DirtyCheckEventListener",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.hibernate.event.spi.DirtyCheckEventListener[]"
+  },
+  {
+    "name": "org.hibernate.event.spi.EventType",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.hibernate.event.spi.EventType[]"
+  },
+  {
+    "name": "org.hibernate.event.spi.EvictEventListener",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.hibernate.event.spi.EvictEventListener[]"
+  },
+  {
+    "name": "org.hibernate.event.spi.FlushEntityEventListener",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.hibernate.event.spi.FlushEntityEventListener[]"
+  },
+  {
+    "name": "org.hibernate.event.spi.FlushEventListener",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.hibernate.event.spi.FlushEventListener[]"
+  },
+  {
+    "name": "org.hibernate.event.spi.InitializeCollectionEventListener",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.hibernate.event.spi.InitializeCollectionEventListener[]"
+  },
+  {
+    "name": "org.hibernate.event.spi.LoadEventListener",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.hibernate.event.spi.LoadEventListener[]"
+  },
+  {
+    "name": "org.hibernate.event.spi.LockEventListener",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.hibernate.event.spi.LockEventListener[]"
+  },
+  {
+    "name": "org.hibernate.event.spi.MergeEventListener",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.hibernate.event.spi.MergeEventListener[]"
+  },
+  {
+    "name": "org.hibernate.event.spi.PersistEventListener",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.hibernate.event.spi.PersistEventListener[]"
+  },
+  {
+    "name": "org.hibernate.event.spi.PostCollectionRecreateEventListener",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.hibernate.event.spi.PostCollectionRecreateEventListener[]"
+  },
+  {
+    "name": "org.hibernate.event.spi.PostCollectionRemoveEventListener",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.hibernate.event.spi.PostCollectionRemoveEventListener[]"
+  },
+  {
+    "name": "org.hibernate.event.spi.PostCollectionUpdateEventListener",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.hibernate.event.spi.PostCollectionUpdateEventListener[]"
+  },
+  {
+    "name": "org.hibernate.event.spi.PostDeleteEventListener",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.hibernate.event.spi.PostDeleteEventListener[]"
+  },
+  {
+    "name": "org.hibernate.event.spi.PostInsertEventListener",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.hibernate.event.spi.PostInsertEventListener[]"
+  },
+  {
+    "name": "org.hibernate.event.spi.PostLoadEventListener",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.hibernate.event.spi.PostLoadEventListener[]"
+  },
+  {
+    "name": "org.hibernate.event.spi.PostUpdateEventListener",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.hibernate.event.spi.PostUpdateEventListener[]"
+  },
+  {
+    "name": "org.hibernate.event.spi.PreCollectionRecreateEventListener",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.hibernate.event.spi.PreCollectionRecreateEventListener[]"
+  },
+  {
+    "name": "org.hibernate.event.spi.PreCollectionRemoveEventListener",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.hibernate.event.spi.PreCollectionRemoveEventListener[]"
+  },
+  {
+    "name": "org.hibernate.event.spi.PreCollectionUpdateEventListener",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.hibernate.event.spi.PreCollectionUpdateEventListener[]"
+  },
+  {
+    "name": "org.hibernate.event.spi.PreDeleteEventListener",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.hibernate.event.spi.PreInsertEventListener",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.hibernate.event.spi.PreLoadEventListener",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.hibernate.event.spi.PreLoadEventListener[]"
+  },
+  {
+    "name": "org.hibernate.event.spi.PreUpdateEventListener",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.hibernate.event.spi.PreUpdateEventListener[]"
+  },
+  {
+    "name": "org.hibernate.event.spi.RefreshEventListener",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.hibernate.event.spi.RefreshEventListener[]"
+  },
+  {
+    "name": "org.hibernate.event.spi.ReplicateEventListener",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.hibernate.event.spi.ReplicateEventListener[]"
+  },
+  {
+    "name": "org.hibernate.event.spi.ResolveNaturalIdEventListener",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.hibernate.event.spi.ResolveNaturalIdEventListener[]"
+  },
+  {
+    "name": "org.hibernate.event.spi.SaveOrUpdateEventListener",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.hibernate.event.spi.SaveOrUpdateEventListener[]"
+  },
+  {
+    "name": "org.hibernate.hql.internal.antlr.HqlTokenTypes",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.hibernate.hql.internal.antlr.SqlTokenTypes",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.hibernate.hql.internal.ast.HqlToken",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.hibernate.hql.internal.ast.tree.BinaryLogicOperatorNode",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.hibernate.hql.internal.ast.tree.DotNode",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.hibernate.hql.internal.ast.tree.FromClause",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.hibernate.hql.internal.ast.tree.FromElement",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.hibernate.hql.internal.ast.tree.IdentNode",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.hibernate.hql.internal.ast.tree.Node",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.hibernate.hql.internal.ast.tree.OrderByClause",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.hibernate.hql.internal.ast.tree.ParameterNode",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.hibernate.hql.internal.ast.tree.QueryNode",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.hibernate.hql.internal.ast.tree.SelectClause",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.hibernate.hql.internal.ast.tree.SelectExpressionImpl",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.hibernate.hql.internal.ast.tree.SqlFragment",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.hibernate.hql.internal.ast.tree.SqlNode",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.hibernate.id.Assigned",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.hibernate.id.ForeignGenerator",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.hibernate.id.GUIDGenerator",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.hibernate.id.IdentityGenerator",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.hibernate.id.IncrementGenerator",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.hibernate.id.SelectGenerator",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.hibernate.id.SequenceHiLoGenerator",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.hibernate.id.SequenceIdentityGenerator",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.hibernate.id.UUIDGenerator",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.hibernate.id.UUIDHexGenerator",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.hibernate.id.enhanced.SequenceStyleGenerator",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.hibernate.internal.CoreMessageLogger",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.hibernate.internal.CoreMessageLogger_$logger",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.hibernate.internal.EntityManagerMessageLogger",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.hibernate.internal.EntityManagerMessageLogger_$logger",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.hibernate.internal.SessionImpl",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.hibernate.jpa.HibernateEntityManager",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.hibernate.jpa.HibernateEntityManagerFactory",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.hibernate.mapping.PersistentClass",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.hibernate.persister.collection.BasicCollectionPersister",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.hibernate.persister.collection.OneToManyPersister",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.hibernate.persister.entity.JoinedSubclassEntityPersister",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.hibernate.persister.entity.SingleTableEntityPersister",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.hibernate.persister.entity.UnionSubclassEntityPersister",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.hibernate.persister.spi.PersisterCreationContext",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.hibernate.query.QueryProducer",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.hibernate.query.spi.QueryImplementor",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true,
+    "allPublicMethods": true
+  },
+  {
+    "name": "org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorBuilderImpl",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.hibernate.sql.ordering.antlr.GeneratedOrderByFragmentRendererTokenTypes",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.hibernate.tuple.entity.AbstractEntityTuplizer",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.hibernate.tuple.entity.EntityTuplizer",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.hibernate.tuple.entity.PojoEntityTuplizer",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.postgresql.Driver",
+    "allDeclaredConstructors": true
+  },
+  {
+    "name": "org.postgresql.PGProperty",
+    "allDeclaredFields": true
   },
   {
     "name": "org.springframework.aop.MethodMatcher",
@@ -410,6 +1263,11 @@
     "allPublicMethods": true
   },
   {
+    "name": "org.springframework.beans.factory.InitializingBean",
+    "allDeclaredConstructors": true,
+    "allPublicMethods": true
+  },
+  {
     "name": "org.springframework.beans.factory.ObjectFactory",
     "allDeclaredMethods": true
   },
@@ -442,6 +1300,11 @@
     "allDeclaredMethods": true
   },
   {
+    "name": "org.springframework.beans.factory.config.BeanFactoryPostProcessor",
+    "allDeclaredConstructors": true,
+    "allPublicMethods": true
+  },
+  {
     "name": "org.springframework.beans.factory.config.PropertiesFactoryBean",
     "allDeclaredFields": true,
     "allDeclaredConstructors": true,
@@ -467,6 +1330,12 @@
   },
   {
     "name": "org.springframework.boot.SpringBootConfiguration",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true,
+    "allPublicMethods": true
+  },
+  {
+    "name": "org.springframework.boot.autoconfigure.AbstractDependsOnBeanFactoryPostProcessor",
     "allDeclaredConstructors": true,
     "allDeclaredMethods": true,
     "allPublicMethods": true
@@ -549,6 +1418,21 @@
     "allDeclaredConstructors": true
   },
   {
+    "name": "org.springframework.boot.autoconfigure.aop.AopAutoConfiguration$AspectJAutoProxyingConfiguration",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true
+  },
+  {
+    "name": "org.springframework.boot.autoconfigure.aop.AopAutoConfiguration$AspectJAutoProxyingConfiguration$CglibAutoProxyConfiguration",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true
+  },
+  {
+    "name": "org.springframework.boot.autoconfigure.aop.AopAutoConfiguration$AspectJAutoProxyingConfiguration$JdkDynamicAutoProxyConfiguration",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true
+  },
+  {
     "name": "org.springframework.boot.autoconfigure.aop.AopAutoConfiguration$ClassProxyingConfiguration",
     "allDeclaredFields": true,
     "allDeclaredConstructors": true
@@ -590,7 +1474,9 @@
   },
   {
     "name": "org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration$CacheManagerEntityManagerFactoryDependsOnPostProcessor",
-    "allDeclaredConstructors": true
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true,
+    "allPublicMethods": true
   },
   {
     "name": "org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration$CacheManagerValidator",
@@ -761,6 +1647,12 @@
     "allDeclaredMethods": true
   },
   {
+    "name": "org.springframework.boot.autoconfigure.condition.ConditionalOnJndi",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
     "name": "org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean",
     "allDeclaredFields": true,
     "allDeclaredConstructors": true,
@@ -823,6 +1715,10 @@
         "parameterTypes": []
       }
     ]
+  },
+  {
+    "name": "org.springframework.boot.autoconfigure.condition.OnJndiCondition",
+    "allDeclaredConstructors": true
   },
   {
     "name": "org.springframework.boot.autoconfigure.condition.OnPropertyCondition",
@@ -937,107 +1833,53 @@
     "allPublicMethods": true
   },
   {
-    "name": "org.springframework.boot.autoconfigure.data.ConditionalOnRepositoryType",
-    "allDeclaredFields": true,
-    "allDeclaredConstructors": true,
-    "allDeclaredMethods": true
-  },
-  {
-    "name": "org.springframework.boot.autoconfigure.data.OnRepositoryTypeCondition",
-    "allDeclaredConstructors": true
-  },
-  {
-    "name": "org.springframework.boot.autoconfigure.data.RepositoryType",
-    "allDeclaredFields": true,
-    "allDeclaredConstructors": true,
-    "allDeclaredMethods": true
-  },
-  {
     "name": "org.springframework.boot.autoconfigure.data.couchbase.CouchbaseDataAutoConfiguration"
   },
   {
-    "name": "org.springframework.boot.autoconfigure.data.mongo.MongoDataAutoConfiguration",
-    "allDeclaredFields": true,
-    "allDeclaredConstructors": true
-  },
-  {
-    "name": "org.springframework.boot.autoconfigure.data.mongo.MongoDataConfiguration",
-    "allDeclaredFields": true,
-    "allDeclaredConstructors": true,
-    "allDeclaredMethods": true,
-    "methods": [
-      {
-        "name": "mongoMappingContext",
-        "parameterTypes": [
-          "org.springframework.context.ApplicationContext",
-          "org.springframework.boot.autoconfigure.mongo.MongoProperties",
-          "org.springframework.data.mongodb.core.convert.MongoCustomConversions"
-        ]
-      },
-      {
-        "name": "mongoCustomConversions",
-        "parameterTypes": []
-      }
-    ]
-  },
-  {
-    "name": "org.springframework.boot.autoconfigure.data.mongo.MongoDatabaseFactoryConfiguration",
-    "allDeclaredFields": true,
-    "allDeclaredConstructors": true,
-    "allDeclaredMethods": true,
-    "methods": [
-      {
-        "name": "mongoDatabaseFactory",
-        "parameterTypes": [
-          "com.mongodb.client.MongoClient",
-          "org.springframework.boot.autoconfigure.mongo.MongoProperties"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "org.springframework.boot.autoconfigure.data.mongo.MongoDatabaseFactoryDependentConfiguration",
-    "allDeclaredFields": true,
-    "allDeclaredConstructors": true,
-    "allDeclaredMethods": true,
-    "methods": [
-      {
-        "name": "mongoTemplate",
-        "parameterTypes": [
-          "org.springframework.data.mongodb.MongoDatabaseFactory",
-          "org.springframework.data.mongodb.core.convert.MongoConverter"
-        ]
-      },
-      {
-        "name": "mappingMongoConverter",
-        "parameterTypes": [
-          "org.springframework.data.mongodb.MongoDatabaseFactory",
-          "org.springframework.data.mongodb.core.mapping.MongoMappingContext",
-          "org.springframework.data.mongodb.core.convert.MongoCustomConversions"
-        ]
-      },
-      {
-        "name": "gridFsTemplate",
-        "parameterTypes": [
-          "org.springframework.data.mongodb.MongoDatabaseFactory",
-          "org.springframework.data.mongodb.core.MongoTemplate"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "org.springframework.boot.autoconfigure.data.mongo.MongoRepositoriesAutoConfiguration",
-    "allDeclaredFields": true,
-    "allDeclaredConstructors": true
-  },
-  {
-    "name": "org.springframework.boot.autoconfigure.data.mongo.MongoRepositoriesRegistrar",
+    "name": "org.springframework.boot.autoconfigure.data.jpa.EntityManagerFactoryDependsOnPostProcessor",
     "allDeclaredConstructors": true,
     "allDeclaredMethods": true,
     "allPublicMethods": true
   },
   {
-    "name": "org.springframework.boot.autoconfigure.data.mongo.MongoRepositoriesRegistrar$EnableMongoRepositoriesConfiguration",
+    "name": "org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "methods": [
+      {
+        "name": "entityManagerFactoryBootstrapExecutorCustomizer",
+        "parameterTypes": [
+          "java.util.Map"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration$BootstrapExecutorCondition",
+    "allDeclaredConstructors": true
+  },
+  {
+    "name": "org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration$BootstrapExecutorCondition$DeferredBootstrapMode",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true,
+    "allPublicMethods": true
+  },
+  {
+    "name": "org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration$BootstrapExecutorCondition$LazyBootstrapMode",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true,
+    "allPublicMethods": true
+  },
+  {
+    "name": "org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesRegistrar",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true,
+    "allPublicMethods": true
+  },
+  {
+    "name": "org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesRegistrar$EnableJpaRepositoriesConfiguration",
     "allDeclaredFields": true,
     "allDeclaredConstructors": true,
     "allDeclaredMethods": true,
@@ -1324,6 +2166,47 @@
     "allDeclaredMethods": true
   },
   {
+    "name": "org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true
+  },
+  {
+    "name": "org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration$EmbeddedDatabaseCondition",
+    "allDeclaredConstructors": true
+  },
+  {
+    "name": "org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration$EmbeddedDatabaseConfiguration",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true
+  },
+  {
+    "name": "org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration$PooledDataSourceAvailableCondition",
+    "allDeclaredConstructors": true
+  },
+  {
+    "name": "org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration$PooledDataSourceCondition",
+    "allDeclaredConstructors": true
+  },
+  {
+    "name": "org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration$PooledDataSourceCondition$ExplicitType",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true,
+    "allPublicMethods": true
+  },
+  {
+    "name": "org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration$PooledDataSourceCondition$PooledDataSourceAvailable",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true,
+    "allPublicMethods": true
+  },
+  {
+    "name": "org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration$PooledDataSourceConfiguration",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true
+  },
+  {
     "name": "org.springframework.boot.autoconfigure.jdbc.DataSourceBeanCreationFailureAnalyzer",
     "methods": [
       {
@@ -1333,7 +2216,148 @@
     ]
   },
   {
-    "name": "org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration"
+    "name": "org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Dbcp2",
+    "allDeclaredConstructors": true
+  },
+  {
+    "name": "org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Generic",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true,
+    "methods": [
+      {
+        "name": "dataSource",
+        "parameterTypes": [
+          "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true,
+    "methods": [
+      {
+        "name": "dataSource",
+        "parameterTypes": [
+          "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$OracleUcp",
+    "allDeclaredConstructors": true
+  },
+  {
+    "name": "org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Tomcat",
+    "allDeclaredConstructors": true
+  },
+  {
+    "name": "org.springframework.boot.autoconfigure.jdbc.DataSourceInitializationConfiguration",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.springframework.boot.autoconfigure.jdbc.DataSourceInitializationConfiguration$Registrar",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true,
+    "allPublicMethods": true
+  },
+  {
+    "name": "org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true,
+    "allPublicMethods": true
+  },
+  {
+    "name": "org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerPostProcessor",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.springframework.boot.autoconfigure.jdbc.DataSourceJmxConfiguration",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true,
+    "methods": [
+      {
+        "name": "access$000",
+        "parameterTypes": []
+      }
+    ]
+  },
+  {
+    "name": "org.springframework.boot.autoconfigure.jdbc.DataSourceJmxConfiguration$Hikari",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true
+  },
+  {
+    "name": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$Xa",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.springframework.boot.autoconfigure.jdbc.DataSourceSchemaCreatedEvent",
+    "allDeclaredConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name": "org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true
+  },
+  {
+    "name": "org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration$JdbcTransactionManagerConfiguration",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "methods": [
+      {
+        "name": "transactionManager",
+        "parameterTypes": [
+          "org.springframework.core.env.Environment",
+          "javax.sql.DataSource",
+          "org.springframework.beans.factory.ObjectProvider"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "org.springframework.boot.autoconfigure.jdbc.EmbeddedDataSourceConfiguration",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true,
+    "methods": [
+      {
+        "name": "setBeanClassLoader",
+        "parameterTypes": [
+          "java.lang.ClassLoader"
+        ]
+      },
+      {
+        "name": "dataSource",
+        "parameterTypes": [
+          "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties"
+        ]
+      }
+    ]
   },
   {
     "name": "org.springframework.boot.autoconfigure.jdbc.HikariDriverConfigurationFailureAnalyzer",
@@ -1345,57 +2369,113 @@
     ]
   },
   {
+    "name": "org.springframework.boot.autoconfigure.jdbc.JdbcProperties",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.springframework.boot.autoconfigure.jdbc.JdbcProperties$Template",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true
+  },
+  {
+    "name": "org.springframework.boot.autoconfigure.jdbc.JdbcTemplateConfiguration",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true,
+    "methods": [
+      {
+        "name": "jdbcTemplate",
+        "parameterTypes": [
+          "javax.sql.DataSource",
+          "org.springframework.boot.autoconfigure.jdbc.JdbcProperties"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "org.springframework.boot.autoconfigure.jdbc.JndiDataSourceAutoConfiguration",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "methods": [
+      {
+        "name": "dataSource",
+        "parameterTypes": [
+          "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties",
+          "org.springframework.context.ApplicationContext"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "org.springframework.boot.autoconfigure.jdbc.NamedParameterJdbcTemplateConfiguration",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true,
+    "methods": [
+      {
+        "name": "namedParameterJdbcTemplate",
+        "parameterTypes": [
+          "org.springframework.jdbc.core.JdbcTemplate"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "org.springframework.boot.autoconfigure.jdbc.XADataSourceAutoConfiguration",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "methods": [
+      {
+        "name": "dataSource",
+        "parameterTypes": [
+          "org.springframework.boot.jdbc.XADataSourceWrapper",
+          "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties",
+          "org.springframework.beans.factory.ObjectProvider"
+        ]
+      },
+      {
+        "name": "setBeanClassLoader",
+        "parameterTypes": [
+          "java.lang.ClassLoader"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "org.springframework.boot.autoconfigure.jdbc.metadata.DataSourcePoolMetadataProvidersConfiguration",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.springframework.boot.autoconfigure.jdbc.metadata.DataSourcePoolMetadataProvidersConfiguration$HikariPoolDataSourceMetadataProviderConfiguration",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "methods": [
+      {
+        "name": "hikariPoolDataSourceMetadataProvider",
+        "parameterTypes": []
+      }
+    ]
+  },
+  {
+    "name": "org.springframework.boot.autoconfigure.jms.activemq.ActiveMQAutoConfiguration"
+  },
+  {
+    "name": "org.springframework.boot.autoconfigure.jms.artemis.ArtemisAutoConfiguration"
+  },
+  {
     "name": "org.springframework.boot.autoconfigure.jsonb.JsonbAutoConfiguration"
   },
   {
     "name": "org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener",
-    "allDeclaredConstructors": true
-  },
-  {
-    "name": "org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration",
-    "allDeclaredFields": true,
-    "allDeclaredConstructors": true,
-    "methods": [
-      {
-        "name": "mongo",
-        "parameterTypes": [
-          "org.springframework.beans.factory.ObjectProvider",
-          "com.mongodb.MongoClientSettings"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration$MongoClientSettingsConfiguration",
-    "allDeclaredFields": true,
-    "allDeclaredConstructors": true,
-    "methods": [
-      {
-        "name": "mongoClientSettings",
-        "parameterTypes": []
-      },
-      {
-        "name": "mongoPropertiesCustomizer",
-        "parameterTypes": [
-          "org.springframework.boot.autoconfigure.mongo.MongoProperties",
-          "org.springframework.core.env.Environment"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "org.springframework.boot.autoconfigure.mongo.MongoProperties",
-    "allDeclaredConstructors": true,
-    "allDeclaredMethods": true
-  },
-  {
-    "name": "org.springframework.boot.autoconfigure.mongo.MongoProperties$Gridfs",
-    "allDeclaredFields": true,
-    "allDeclaredConstructors": true,
-    "allDeclaredMethods": true
-  },
-  {
-    "name": "org.springframework.boot.autoconfigure.mongo.MongoPropertiesClientSettingsBuilderCustomizer",
     "allDeclaredConstructors": true
   },
   {
@@ -1408,7 +2488,152 @@
     ]
   },
   {
-    "name": "org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration"
+    "name": "org.springframework.boot.autoconfigure.orm.jpa.DataSourceInitializedPublisher",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.springframework.boot.autoconfigure.orm.jpa.DataSourceInitializedPublisher$Registrar",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true,
+    "allPublicMethods": true
+  },
+  {
+    "name": "org.springframework.boot.autoconfigure.orm.jpa.EntityManagerFactoryBuilderCustomizer",
+    "allDeclaredConstructors": true
+  },
+  {
+    "name": "org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true
+  },
+  {
+    "name": "org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true,
+    "methods": [
+      {
+        "name": "createJpaVendorAdapter",
+        "parameterTypes": []
+      },
+      {
+        "name": "getVendorProperties",
+        "parameterTypes": []
+      },
+      {
+        "name": "customizeVendorProperties",
+        "parameterTypes": [
+          "java.util.Map"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "org.springframework.boot.autoconfigure.orm.jpa.HibernateProperties",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.springframework.boot.autoconfigure.orm.jpa.HibernateProperties$Naming",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true,
+    "methods": [
+      {
+        "name": "transactionManager",
+        "parameterTypes": [
+          "org.springframework.beans.factory.ObjectProvider"
+        ]
+      },
+      {
+        "name": "jpaVendorAdapter",
+        "parameterTypes": []
+      },
+      {
+        "name": "entityManagerFactoryBuilder",
+        "parameterTypes": [
+          "org.springframework.orm.jpa.JpaVendorAdapter",
+          "org.springframework.beans.factory.ObjectProvider",
+          "org.springframework.beans.factory.ObjectProvider"
+        ]
+      },
+      {
+        "name": "entityManagerFactory",
+        "parameterTypes": [
+          "org.springframework.boot.orm.jpa.EntityManagerFactoryBuilder"
+        ]
+      },
+      {
+        "name": "createJpaVendorAdapter",
+        "parameterTypes": []
+      },
+      {
+        "name": "getVendorProperties",
+        "parameterTypes": []
+      },
+      {
+        "name": "customizeVendorProperties",
+        "parameterTypes": [
+          "java.util.Map"
+        ]
+      },
+      {
+        "name": "getPackagesToScan",
+        "parameterTypes": []
+      },
+      {
+        "name": "getJtaTransactionManager",
+        "parameterTypes": []
+      },
+      {
+        "name": "isJta",
+        "parameterTypes": []
+      },
+      {
+        "name": "getProperties",
+        "parameterTypes": []
+      },
+      {
+        "name": "getDataSource",
+        "parameterTypes": []
+      },
+      {
+        "name": "setBeanFactory",
+        "parameterTypes": [
+          "org.springframework.beans.factory.BeanFactory"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "methods": [
+      {
+        "name": "openEntityManagerInViewInterceptor",
+        "parameterTypes": []
+      },
+      {
+        "name": "openEntityManagerInViewInterceptorConfigurer",
+        "parameterTypes": [
+          "org.springframework.orm.jpa.support.OpenEntityManagerInViewInterceptor"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "org.springframework.boot.autoconfigure.orm.jpa.JpaProperties",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
   },
   {
     "name": "org.springframework.boot.autoconfigure.r2dbc.ConnectionFactoryBeanCreationFailureAnalyzer",
@@ -1569,7 +2794,31 @@
     "allDeclaredMethods": true
   },
   {
-    "name": "org.springframework.boot.autoconfigure.transaction.jta.JtaAutoConfiguration"
+    "name": "org.springframework.boot.autoconfigure.transaction.jta.AtomikosJtaConfiguration",
+    "allDeclaredConstructors": true
+  },
+  {
+    "name": "org.springframework.boot.autoconfigure.transaction.jta.BitronixJtaConfiguration",
+    "allDeclaredConstructors": true
+  },
+  {
+    "name": "org.springframework.boot.autoconfigure.transaction.jta.JndiJtaConfiguration",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true,
+    "methods": [
+      {
+        "name": "transactionManager",
+        "parameterTypes": [
+          "org.springframework.beans.factory.ObjectProvider"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "org.springframework.boot.autoconfigure.transaction.jta.JtaAutoConfiguration",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true
   },
   {
     "name": "org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration"
@@ -2015,12 +3264,6 @@
       {
         "name": "formContentFilter",
         "parameterTypes": []
-      },
-      {
-        "name": "getResourceLocations",
-        "parameterTypes": [
-          "java.lang.String[]"
-        ]
       }
     ]
   },
@@ -2051,6 +3294,12 @@
         ]
       },
       {
+        "name": "addResourceHandlers",
+        "parameterTypes": [
+          "org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry"
+        ]
+      },
+      {
         "name": "welcomePageHandlerMapping",
         "parameterTypes": [
           "org.springframework.context.ApplicationContext",
@@ -2060,6 +3309,14 @@
       },
       {
         "name": "localeResolver",
+        "parameterTypes": []
+      },
+      {
+        "name": "themeResolver",
+        "parameterTypes": []
+      },
+      {
+        "name": "flashMapManager",
         "parameterTypes": []
       },
       {
@@ -2172,12 +3429,6 @@
         "name": "addFormatters",
         "parameterTypes": [
           "org.springframework.format.FormatterRegistry"
-        ]
-      },
-      {
-        "name": "addResourceHandlers",
-        "parameterTypes": [
-          "org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry"
         ]
       },
       {
@@ -2742,6 +3993,13 @@
     "allDeclaredConstructors": true
   },
   {
+    "name": "org.springframework.boot.jdbc.XADataSourceWrapper"
+  },
+  {
+    "name": "org.springframework.boot.jdbc.metadata.DataSourcePoolMetadataProvider",
+    "allDeclaredConstructors": true
+  },
+  {
     "name": "org.springframework.boot.liquibase.LiquibaseChangelogMissingFailureAnalyzer",
     "methods": [
       {
@@ -2805,6 +4063,22 @@
   },
   {
     "name": "org.springframework.boot.logging.logback.WhitespaceThrowableProxyConverter",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.springframework.boot.orm.jpa.EntityManagerFactoryBuilder",
+    "allDeclaredConstructors": true
+  },
+  {
+    "name": "org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy",
     "allDeclaredFields": true,
     "allDeclaredConstructors": true,
     "allDeclaredMethods": true
@@ -2932,6 +4206,16 @@
     "allPublicMethods": true
   },
   {
+    "name": "org.springframework.context.ApplicationEvent",
+    "allDeclaredConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name": "org.springframework.context.ApplicationListener",
+    "allDeclaredConstructors": true,
+    "allPublicMethods": true
+  },
+  {
     "name": "org.springframework.context.EmbeddedValueResolverAware",
     "allDeclaredFields": true,
     "allDeclaredConstructors": true,
@@ -2970,6 +4254,12 @@
     "allDeclaredFields": true,
     "allDeclaredConstructors": true,
     "allDeclaredMethods": true
+  },
+  {
+    "name": "org.springframework.context.annotation.AspectJAutoProxyRegistrar",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true,
+    "allPublicMethods": true
   },
   {
     "name": "org.springframework.context.annotation.AutoProxyRegistrar",
@@ -3035,6 +4325,12 @@
     "name": "org.springframework.context.annotation.DeferredImportSelector",
     "allDeclaredConstructors": true,
     "allPublicMethods": true
+  },
+  {
+    "name": "org.springframework.context.annotation.EnableAspectJAutoProxy",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
   },
   {
     "name": "org.springframework.context.annotation.FilterType",
@@ -3139,13 +4435,72 @@
     "allDeclaredConstructors": true
   },
   {
-    "name": "org.springframework.data.annotation.Persistent",
+    "name": "org.springframework.data.jpa.repository.JpaRepository",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name": "org.springframework.data.jpa.repository.config.EnableJpaRepositories",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.springframework.data.jpa.repository.config.JpaMetamodelMappingContextFactoryBean",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.springframework.data.jpa.repository.config.JpaRepositoriesRegistrar",
     "allDeclaredConstructors": true,
     "allDeclaredMethods": true,
     "allPublicMethods": true
   },
   {
+    "name": "org.springframework.data.jpa.repository.config.JpaRepositoryConfigExtension"
+  },
+  {
+    "name": "org.springframework.data.jpa.repository.query.JpaQueryMethodFactory",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
     "name": "org.springframework.data.jpa.repository.support.EntityManagerBeanDefinitionRegistrarPostProcessor",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.springframework.data.jpa.repository.support.JpaEvaluationContextExtension",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.springframework.data.jpa.repository.support.JpaRepositoryFactory",
+    "allDeclaredConstructors": true
+  },
+  {
+    "name": "org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.springframework.data.jpa.repository.support.SimpleJpaRepository",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.springframework.data.jpa.util.HibernateProxyDetector",
+    "methods": [
+      {
+        "name": "<init>",
+        "parameterTypes": []
+      }
+    ]
+  },
+  {
+    "name": "org.springframework.data.jpa.util.JpaMetamodelCacheCleanup",
     "allDeclaredConstructors": true,
     "allDeclaredMethods": true
   },
@@ -3156,123 +4511,17 @@
     "allDeclaredMethods": true
   },
   {
-    "name": "org.springframework.data.mongodb.MongoDatabaseFactory"
-  },
-  {
-    "name": "org.springframework.data.mongodb.config.GeoJsonConfiguration",
-    "methods": [
-      {
-        "name": "<init>",
-        "parameterTypes": []
-      }
-    ]
-  },
-  {
-    "name": "org.springframework.data.mongodb.config.MongoConfigurationSupport",
-    "allDeclaredFields": true,
-    "allDeclaredConstructors": true,
-    "allDeclaredMethods": true
-  },
-  {
-    "name": "org.springframework.data.mongodb.core.MongoDatabaseFactorySupport",
-    "allDeclaredConstructors": true
-  },
-  {
-    "name": "org.springframework.data.mongodb.core.MongoOperations"
-  },
-  {
-    "name": "org.springframework.data.mongodb.core.MongoTemplate",
-    "allDeclaredConstructors": true
-  },
-  {
-    "name": "org.springframework.data.mongodb.core.convert.MappingMongoConverter",
-    "allDeclaredConstructors": true
-  },
-  {
-    "name": "org.springframework.data.mongodb.core.convert.MongoConverter"
-  },
-  {
-    "name": "org.springframework.data.mongodb.core.convert.MongoCustomConversions",
-    "allDeclaredConstructors": true
-  },
-  {
-    "name": "org.springframework.data.mongodb.core.mapping.MongoMappingContext",
-    "allDeclaredConstructors": true
-  },
-  {
-    "name": "org.springframework.data.mongodb.core.mapping.event.AfterConvertCallback",
-    "allDeclaredFields": true,
-    "allDeclaredConstructors": true,
-    "allDeclaredMethods": true
-  },
-  {
-    "name": "org.springframework.data.mongodb.core.mapping.event.AfterSaveCallback",
-    "allDeclaredFields": true,
-    "allDeclaredConstructors": true,
-    "allDeclaredMethods": true
-  },
-  {
-    "name": "org.springframework.data.mongodb.core.mapping.event.BeforeConvertCallback",
-    "allDeclaredFields": true,
-    "allDeclaredConstructors": true,
-    "allDeclaredMethods": true
-  },
-  {
-    "name": "org.springframework.data.mongodb.core.mapping.event.BeforeSaveCallback",
-    "allDeclaredFields": true,
-    "allDeclaredConstructors": true,
-    "allDeclaredMethods": true
-  },
-  {
-    "name": "org.springframework.data.mongodb.gridfs.GridFsOperations"
-  },
-  {
-    "name": "org.springframework.data.mongodb.gridfs.GridFsTemplate",
-    "allDeclaredConstructors": true
-  },
-  {
-    "name": "org.springframework.data.mongodb.repository.MongoRepository"
-  },
-  {
-    "name": "org.springframework.data.mongodb.repository.config.EnableMongoRepositories",
-    "allDeclaredFields": true,
-    "allDeclaredConstructors": true,
-    "allDeclaredMethods": true
-  },
-  {
-    "name": "org.springframework.data.mongodb.repository.config.MongoRepositoriesRegistrar",
-    "allDeclaredConstructors": true,
-    "allDeclaredMethods": true,
-    "allPublicMethods": true
-  },
-  {
-    "name": "org.springframework.data.mongodb.repository.config.MongoRepositoryConfigurationExtension",
-    "allDeclaredFields": true,
-    "allDeclaredConstructors": true,
-    "allDeclaredMethods": true
-  },
-  {
-    "name": "org.springframework.data.mongodb.repository.support.MongoRepositoryFactory",
-    "allDeclaredConstructors": true
-  },
-  {
-    "name": "org.springframework.data.mongodb.repository.support.MongoRepositoryFactoryBean",
-    "allDeclaredFields": true,
-    "allDeclaredConstructors": true,
-    "allDeclaredMethods": true
-  },
-  {
-    "name": "org.springframework.data.mongodb.repository.support.SimpleMongoRepository",
-    "allDeclaredFields": true,
-    "allDeclaredConstructors": true,
-    "allDeclaredMethods": true
-  },
-  {
     "name": "org.springframework.data.querydsl.binding.QuerydslBindingsFactory",
     "allDeclaredConstructors": true
   },
   {
     "name": "org.springframework.data.repository.CrudRepository",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allPublicMethods": true
+  },
+  {
+    "name": "org.springframework.data.repository.PagingAndSortingRepository",
     "allDeclaredFields": true,
     "allDeclaredConstructors": true,
     "allPublicMethods": true
@@ -3324,7 +4573,8 @@
     "name": "org.springframework.data.repository.query.QueryByExampleExecutor",
     "allDeclaredFields": true,
     "allDeclaredConstructors": true,
-    "allDeclaredMethods": true
+    "allDeclaredMethods": true,
+    "allPublicMethods": true
   },
   {
     "name": "org.springframework.data.web.HateoasPageableHandlerMethodArgumentResolver",
@@ -3523,7 +4773,18 @@
     "allDeclaredConstructors": true
   },
   {
+    "name": "org.springframework.http.HttpEntity",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
     "name": "org.springframework.http.HttpStatus",
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.springframework.http.ResponseEntity",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
     "allDeclaredMethods": true
   },
   {
@@ -3546,6 +4807,42 @@
     "allDeclaredConstructors": true
   },
   {
+    "name": "org.springframework.jdbc.core.JdbcOperations"
+  },
+  {
+    "name": "org.springframework.jdbc.core.JdbcTemplate",
+    "allDeclaredConstructors": true
+  },
+  {
+    "name": "org.springframework.jdbc.core.namedparam.NamedParameterJdbcOperations"
+  },
+  {
+    "name": "org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate",
+    "allDeclaredConstructors": true
+  },
+  {
+    "name": "org.springframework.jdbc.datasource.DataSourceTransactionManager",
+    "allDeclaredConstructors": true
+  },
+  {
+    "name": "org.springframework.jdbc.datasource.embedded.EmbeddedDatabase",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseFactory$EmbeddedDataSourceProxy",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType"
+  },
+  {
+    "name": "org.springframework.jdbc.support.JdbcAccessor",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
     "name": "org.springframework.nativex.utils.LiteConfigurationInitializer",
     "methods": [
       {
@@ -3553,6 +4850,35 @@
         "parameterTypes": []
       }
     ]
+  },
+  {
+    "name": "org.springframework.orm.jpa.AbstractEntityManagerFactoryBean"
+  },
+  {
+    "name": "org.springframework.orm.jpa.JpaVendorAdapter",
+    "allDeclaredConstructors": true
+  },
+  {
+    "name": "org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean",
+    "allDeclaredConstructors": true
+  },
+  {
+    "name": "org.springframework.orm.jpa.SharedEntityManagerCreator",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.springframework.orm.jpa.support.OpenEntityManagerInViewFilter"
+  },
+  {
+    "name": "org.springframework.orm.jpa.support.OpenEntityManagerInViewInterceptor",
+    "allDeclaredConstructors": true
+  },
+  {
+    "name": "org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true
   },
   {
     "name": "org.springframework.scheduling.TaskScheduler"
@@ -3583,7 +4909,8 @@
     "allDeclaredMethods": true
   },
   {
-    "name": "org.springframework.transaction.PlatformTransactionManager"
+    "name": "org.springframework.transaction.PlatformTransactionManager",
+    "allDeclaredConstructors": true
   },
   {
     "name": "org.springframework.transaction.ReactiveTransactionManager"
@@ -3667,6 +4994,36 @@
     "allDeclaredMethods": true
   },
   {
+    "name": "org.springframework.transaction.aspectj.AnnotationTransactionAspect",
+    "allDeclaredConstructors": true
+  },
+  {
+    "name": "org.springframework.transaction.aspectj.AspectJJtaTransactionManagementConfiguration",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true,
+    "methods": [
+      {
+        "name": "jtaTransactionAspect",
+        "parameterTypes": []
+      }
+    ]
+  },
+  {
+    "name": "org.springframework.transaction.aspectj.AspectJTransactionManagementConfiguration",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true,
+    "methods": [
+      {
+        "name": "transactionAspect",
+        "parameterTypes": []
+      }
+    ]
+  },
+  {
+    "name": "org.springframework.transaction.aspectj.JtaAnnotationTransactionAspect",
+    "allDeclaredConstructors": true
+  },
+  {
     "name": "org.springframework.transaction.event.TransactionalEventListenerFactory",
     "allDeclaredConstructors": true
   },
@@ -3692,6 +5049,10 @@
   },
   {
     "name": "org.springframework.transaction.interceptor.TransactionInterceptor",
+    "allDeclaredConstructors": true
+  },
+  {
+    "name": "org.springframework.transaction.jta.JtaTransactionManager",
     "allDeclaredConstructors": true
   },
   {
@@ -3838,7 +5199,15 @@
     "allDeclaredConstructors": true
   },
   {
+    "name": "org.springframework.web.servlet.FlashMapManager",
+    "allDeclaredConstructors": true
+  },
+  {
     "name": "org.springframework.web.servlet.LocaleResolver",
+    "allDeclaredConstructors": true
+  },
+  {
+    "name": "org.springframework.web.servlet.ThemeResolver",
     "allDeclaredConstructors": true
   },
   {
