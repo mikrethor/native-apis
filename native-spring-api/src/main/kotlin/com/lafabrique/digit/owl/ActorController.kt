@@ -11,44 +11,37 @@ class ActorController(val service: ActorService) {
 
     @GetMapping
     fun list(): ResponseEntity<*> {
-        val actors = service.list()
-        return ResponseEntity.status(HttpStatus.OK).body(actors)
+        return ResponseEntity.status(HttpStatus.OK).body(service.list())
     }
 
     @GetMapping("/{id}")
     fun list(@PathVariable id: UUID): ResponseEntity<*> {
-        val actor = service.get(id)
-        return ResponseEntity.status(HttpStatus.OK).body(actor)
+        return ResponseEntity.status(HttpStatus.OK).body(service.get(id))
     }
 
     @PostMapping
     fun add(@RequestBody actor: Actor): ResponseEntity<*>? {
-        val actor2 = service.add(actor)
-        return ResponseEntity.status(HttpStatus.CREATED).body(actor2)
+        return ResponseEntity.status(HttpStatus.CREATED).body(service.add(actor))
     }
 
     @PutMapping
     fun modify(actor: Actor): ResponseEntity<*>? {
-        val actor2 = service.modify(actor)
-        return ResponseEntity.status(HttpStatus.ACCEPTED).body(actor2)
+        return ResponseEntity.status(HttpStatus.ACCEPTED).body(service.modify(actor))
     }
 
     @DeleteMapping("/{id}")
     fun delete(@PathVariable id: UUID): ResponseEntity<*>? {
-        val id = service.delete(id)
-        return ResponseEntity.status(HttpStatus.OK).body(id)
+        return ResponseEntity.status(HttpStatus.OK).body(service.delete(id))
     }
 
     @PutMapping("/{id}/movies/{movieId}")
     fun addActorToMovie(@PathVariable id: UUID, @PathVariable movieId: UUID): ResponseEntity<*>? {
-        val actor = service.addMovieToActor(id, movieId)
-        return ResponseEntity.status(HttpStatus.ACCEPTED).body(actor)
+        return ResponseEntity.status(HttpStatus.ACCEPTED).body(service.addMovieToActor(id, movieId))
     }
 
     @DeleteMapping("/{id}/movies/{movieId}")
     fun deleteActorFromMovie(@PathVariable id: UUID, @PathVariable movieId: UUID): ResponseEntity<*>? {
-        val id = service.removeMovieFromActor(id, movieId)
-        return ResponseEntity.status(HttpStatus.OK).body(id)
+        return ResponseEntity.status(HttpStatus.OK).body(service.removeMovieFromActor(id, movieId))
     }
 
 }

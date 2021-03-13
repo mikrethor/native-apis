@@ -14,14 +14,12 @@ class MovieController(val service: MovieService) {
 
     @GetMapping
     fun list(): ResponseEntity<*> {
-        val movies = service.list()
-        return ResponseEntity.status(HttpStatus.OK).body(movies)
+        return ResponseEntity.status(HttpStatus.OK).body(service.list())
     }
 
     @GetMapping("/{id}")
     fun list(@PathVariable id: UUID): ResponseEntity<*> {
-        val movies = service.get(id)
-        return ResponseEntity.status(HttpStatus.OK).body(movies)
+        return ResponseEntity.status(HttpStatus.OK).body(service.get(id))
     }
 
     @PostMapping
@@ -42,14 +40,12 @@ class MovieController(val service: MovieService) {
 
     @PutMapping
     fun modify(movie: Movie): ResponseEntity<*>? {
-        val movie2 = service.modify(movie)
-        return ResponseEntity.status(HttpStatus.ACCEPTED).body(movie2)
+        return ResponseEntity.status(HttpStatus.ACCEPTED).body(service.modify(movie))
     }
 
     @DeleteMapping("/{id}")
     fun delete(@PathVariable id: UUID): ResponseEntity<*>? {
-        val id = service.delete(id)
-        return ResponseEntity.status(HttpStatus.OK).body(id)
+        return ResponseEntity.status(HttpStatus.OK).body(service.delete(id))
     }
 
     @PutMapping("/{id}/actors/{actorId}")
