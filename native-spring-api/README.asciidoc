@@ -85,3 +85,7 @@ Thor
 Eleni Young (Barbarianna)
 Eleni Young
 Barbarianna
+
+openapi after first code
+
+https://www.mscharhag.com/api-design/rest-many-to-many-relations

@@ -41,4 +41,12 @@ class MovieService(val repository: MovieRepository, val actorRepository: ActorRe
         return repository.findByIdOrNull(id)
     }
 
+    fun removeActorFromMovie(id: UUID, idActor: UUID): Movie {
+        val movie = repository.findById(id).get()
+        val actor = actorRepository.findById(idActor).get()
+        movie.actors?.remove(actor)
+        actor.movies?.remove(movie)
+        return repository.save(movie)
+    }
+
 }

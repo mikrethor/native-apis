@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component
 import java.util.*
 
 @Component
-class ActorService(val repository: ActorRepository) {
+class ActorService(val repository: ActorRepository, val movieRepository: MovieRepository) {
 
     fun list(): MutableIterable<Actor> {
 
@@ -31,6 +31,22 @@ class ActorService(val repository: ActorRepository) {
 
     fun get(id: UUID): Actor? {
         return repository.findByIdOrNull(id)
+    }
+
+    fun addMovieToActor(id: UUID, idMovie: UUID): Actor {
+        val movie = movieRepository.findById(idMovie).get()
+        val actor = repository.findById(id).get()
+        movie.actors?.add(actor)
+        actor.movies?.add(movie)
+        return repository.save(actor)
+    }
+
+    fun removeMovieFromActor(id: UUID, idMovie: UUID): Actor {
+        val movie = movieRepository.findById(idMovie).get()
+        val actor = repository.findById(id).get()
+        movie.actors?.remove(actor)
+        actor.movies?.remove(movie)
+        return repository.save(actor)
     }
 
 }

@@ -5,7 +5,8 @@ import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
 import java.util.*
 
-@RestController("/actors")
+@RestController
+@RequestMapping("actors")
 class ActorController(val service: ActorService) {
 
     @GetMapping
@@ -37,4 +38,17 @@ class ActorController(val service: ActorService) {
         val id = service.delete(id)
         return ResponseEntity.status(HttpStatus.OK).body(id)
     }
+
+    @PutMapping("/{id}/movies/{movieId}")
+    fun addActorToMovie(@PathVariable id: UUID, @PathVariable movieId: UUID): ResponseEntity<*>? {
+        val actor = service.addMovieToActor(id, movieId)
+        return ResponseEntity.status(HttpStatus.ACCEPTED).body(actor)
+    }
+
+    @DeleteMapping("/{id}/movies/{movieId}")
+    fun deleteActorFromMovie(@PathVariable id: UUID, @PathVariable movieId: UUID): ResponseEntity<*>? {
+        val id = service.removeMovieFromActor(id, movieId)
+        return ResponseEntity.status(HttpStatus.OK).body(id)
+    }
+
 }

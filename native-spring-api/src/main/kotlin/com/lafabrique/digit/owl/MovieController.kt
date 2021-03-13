@@ -8,7 +8,8 @@ import org.zalando.problem.Status
 import java.net.URI
 import java.util.*
 
-@RestController("/movies")
+@RestController
+@RequestMapping("movies")
 class MovieController(val service: MovieService) {
 
     @GetMapping
@@ -49,19 +50,17 @@ class MovieController(val service: MovieService) {
     fun delete(@PathVariable id: UUID): ResponseEntity<*>? {
         val id = service.delete(id)
         return ResponseEntity.status(HttpStatus.OK).body(id)
-
     }
 
     @PutMapping("/{id}/actors/{actorId}")
     fun addActorToMovie(@PathVariable id: UUID, @PathVariable actorId: UUID): ResponseEntity<*>? {
-        val movie2 = service.addActorToMovie(id, actorId)
-        return ResponseEntity.status(HttpStatus.ACCEPTED).body(movie2)
+        val movie = service.addActorToMovie(id, actorId)
+        return ResponseEntity.status(HttpStatus.ACCEPTED).body(movie)
     }
 
     @DeleteMapping("/{id}/actors/{actorId}")
     fun deleteActorFromMovie(@PathVariable id: UUID, @PathVariable actorId: UUID): ResponseEntity<*>? {
-        val id = service.delete(id)
+        val id = service.removeActorFromMovie(id, actorId)
         return ResponseEntity.status(HttpStatus.OK).body(id)
-
     }
 }
