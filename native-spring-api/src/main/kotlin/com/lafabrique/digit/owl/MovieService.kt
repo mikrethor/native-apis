@@ -8,7 +8,6 @@ import java.util.*
 class MovieService(val repository: MovieRepository, val actorRepository: ActorRepository) {
 
     fun list(): MutableIterable<Movie> {
-
         return repository.findAll()
     }
 

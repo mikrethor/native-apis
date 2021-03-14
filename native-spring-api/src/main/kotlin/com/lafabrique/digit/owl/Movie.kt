@@ -1,6 +1,7 @@
 package com.lafabrique.digit.owl
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties
 import com.fasterxml.jackson.annotation.ObjectIdGenerators
 import org.hibernate.annotations.GenericGenerator
 import org.springframework.data.annotation.Id
@@ -22,6 +23,7 @@ class Movie {
     var title: String = ""
     var year: Int = 0
 
+    @JsonIgnoreProperties("movies")
     @ManyToMany(mappedBy = "movies")
     var actors: MutableSet<Actor>? = mutableSetOf()
 }
