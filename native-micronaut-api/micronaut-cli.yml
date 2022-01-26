@@ -1,5 +1,5 @@
 applicationType: default
-defaultPackage: com.lafabrique.digit.owl
+defaultPackage: com.xavierbouclet.nativeapi
 testFramework: junit
 sourceLanguage: kotlin
 buildTool: maven

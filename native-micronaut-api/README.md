@@ -10,3 +10,16 @@
 
 - [Micronaut Hikari JDBC Connection Pool documentation](https://micronaut-projects.github.io/micronaut-sql/latest/guide/index.html#jdbc)
 
+
+https://guides.micronaut.io/latest/micronaut-creating-first-graal-app-maven-kotlin.html
+
+sdk use java 21.3.0.r17-grl                                                                                                                                   
+export  GRAALVM_HOME=~/.sdkman/candidates/java/21.3.0.r17-grl/
+
+POSTGRES_USER=compose-postgres -e POSTGRES_PASSWORD=compose-postgres -e POSTGRES_DB=compose-postgres
+
+export DATASOURCE_URL=jdbc:postgresql://localhost:5432/compose-postgres
+export DATASOURCE_USERNAME=compose-postgres
+export DATASOURCE_PASSWORD=compose-postgres
+
+

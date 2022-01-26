@@ -1,11 +1,11 @@
 datasources:
   default:
-    url: jdbc:tc:postgresql:12:///postgres
+    url: jdbc:tc:postgresql:14.1:///postgres
     driverClassName: org.testcontainers.jdbc.ContainerDatabaseDriver
 jpa:
   default:
     entity-scan:
-      packages: 'com.lafabrique.digit.owl'
+      packages: 'com.xavierbouclet.nativeapi'
     properties:
       hibernate:
         hbm2ddl:

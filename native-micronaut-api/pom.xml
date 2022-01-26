@@ -2,7 +2,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.lafabrique.digit.owl</groupId>
+  <groupId>com.xavierbouclet</groupId>
   <artifactId>native-micronaut-api</artifactId>
   <version>0.1</version>
   <packaging>${packaging}</packaging>
@@ -10,19 +10,19 @@
   <parent>
     <groupId>io.micronaut</groupId>
     <artifactId>micronaut-parent</artifactId>
-    <version>2.2.2</version>
+    <version>3.2.7</version>
   </parent>
 
   <properties>
     <packaging>jar</packaging>
-    <jdk.version>11</jdk.version>
-    <release.version>11</release.version>
-    <micronaut.version>2.2.2</micronaut.version>
-    <exec.mainClass>com.lafabrique.digit.owl.ApplicationKt</exec.mainClass>
-    <micronaut.data.version>2.2.1</micronaut.data.version>
-    <kotlinVersion>1.4.10</kotlinVersion>
+    <jdk.version>17</jdk.version>
+    <release.version>17</release.version>
+    <micronaut.version>3.2.7</micronaut.version>
+    <exec.mainClass>com.xavierbouclet.nativeapi.ApplicationKt</exec.mainClass>
+    <micronaut.data.version>3.2.2</micronaut.data.version>
+    <kotlinVersion>1.6.10</kotlinVersion>
     <micronaut.runtime>netty</micronaut.runtime>
-    <micronaut.aws.version>2.2.5</micronaut.aws.version>
+    <micronaut.aws.version>3.1.0</micronaut.aws.version>
   </properties>
 
   <repositories>
@@ -125,6 +125,11 @@
       <scope>runtime</scope>
     </dependency>
     <dependency>
+      <groupId>org.zalando</groupId>
+      <artifactId>problem</artifactId>
+      <version>0.27.1</version>
+    </dependency>
+    <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter-api</artifactId>
       <scope>test</scope>
@@ -199,7 +204,7 @@
                 </annotationProcessorPath>
               </annotationProcessorPaths>
               <annotationProcessorArgs>
-                <annotationProcessorArg>micronaut.processing.group=com.lafabrique.digit.owl</annotationProcessorArg>
+                <annotationProcessorArg>micronaut.processing.group=com.xavierbouclet.nativeapi</annotationProcessorArg>
                 <annotationProcessorArg>micronaut.processing.module=nativeMicronautApi</annotationProcessorArg>
               </annotationProcessorArgs>
             </configuration>

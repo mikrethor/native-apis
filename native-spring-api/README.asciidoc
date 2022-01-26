@@ -1,5 +1,9 @@
 
 
+sdk use java 21.3.0.r17-grl
+export  GRAALVM_HOME=~/.sdkman/candidates/java/21.3.0.r17-grl/
+./mvnw clean package -DskipTests -Pnative
+
 export GRAALVM_HOME=~/.sdkman/candidates/java/21.0.0.r11-grl
 export JAVA_HOME=~/.sdkman/candidates/java/21.0.0.r11-grl
 
@@ -8,6 +12,9 @@ mvn spring-boot:build-image -Pnative
 
 docker run --name some-postgres -e POSTGRES_USER=compose-postgres -e POSTGRES_PASSWORD=compose-postgres -e POSTGRES_DB=compose-postgres -p 5432:5432 -d postgres
 
+https://linux.die.net/man/1/upx
+
+https://github.com/paketo-buildpacks/native-image/issues/59
 
 rest stackoverflow :
 @JsonIdentityInfo(generator= ObjectIdGenerators.PropertyGenerator::class, property="id")
@@ -69,7 +76,7 @@ Mattias
 Andersson
 
 
-Kung Fury 2 2020
+Kung Fury 2 2022
 
 David Sandberg
 David Sandberg
