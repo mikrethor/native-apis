@@ -18,11 +18,9 @@
     <jdk.version>17</jdk.version>
     <release.version>17</release.version>
     <micronaut.version>3.2.7</micronaut.version>
-    <exec.mainClass>com.xavierbouclet.nativeapi.ApplicationKt</exec.mainClass>
+    <exec.mainClass>com.xavierbouclet.nativeapi.Application</exec.mainClass>
     <micronaut.data.version>3.2.2</micronaut.data.version>
-    <kotlinVersion>1.6.10</kotlinVersion>
     <micronaut.runtime>netty</micronaut.runtime>
-    <micronaut.aws.version>3.1.0</micronaut.aws.version>
   </properties>
 
   <repositories>
@@ -58,23 +56,6 @@
       <scope>compile</scope>
     </dependency>
     <dependency>
-      <groupId>org.jetbrains.kotlin</groupId>
-      <artifactId>kotlin-stdlib-jdk8</artifactId>
-      <version>${kotlinVersion}</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.jetbrains.kotlin</groupId>
-      <artifactId>kotlin-reflect</artifactId>
-      <version>${kotlinVersion}</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>io.micronaut.kotlin</groupId>
-      <artifactId>micronaut-kotlin-runtime</artifactId>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
       <groupId>org.graalvm.nativeimage</groupId>
       <artifactId>svm</artifactId>
       <scope>provided</scope>
@@ -90,8 +71,8 @@
       <scope>compile</scope>
     </dependency>
     <dependency>
-      <groupId>javax.annotation</groupId>
-      <artifactId>javax.annotation-api</artifactId>
+      <groupId>jakarta.annotation</groupId>
+      <artifactId>jakarta.annotation-api</artifactId>
       <scope>compile</scope>
     </dependency>
     <dependency>
@@ -105,11 +86,6 @@
       <scope>compile</scope>
     </dependency>
     <dependency>
-      <groupId>io.micronaut.kotlin</groupId>
-      <artifactId>micronaut-kotlin-extension-functions</artifactId>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
       <groupId>ch.qos.logback</groupId>
       <artifactId>logback-classic</artifactId>
       <scope>runtime</scope>
@@ -119,12 +95,7 @@
       <artifactId>postgresql</artifactId>
       <scope>runtime</scope>
     </dependency>
-    <dependency>
-      <groupId>com.fasterxml.jackson.module</groupId>
-      <artifactId>jackson-module-kotlin</artifactId>
-      <scope>runtime</scope>
-    </dependency>
-    <dependency>
+       <dependency>
       <groupId>org.zalando</groupId>
       <artifactId>problem</artifactId>
       <version>0.27.1</version>
@@ -158,129 +129,38 @@
         <artifactId>micronaut-maven-plugin</artifactId>
       </plugin>
       <plugin>
-        <artifactId>kotlin-maven-plugin</artifactId>
-        <groupId>org.jetbrains.kotlin</groupId>
-        <version>${kotlinVersion}</version>
-        <configuration>
-          <jvmTarget>${jdk.version}</jvmTarget>
-          <compilerPlugins>
-<!--            <plugin>jpa</plugin>-->
-            <plugin>all-open</plugin>
-          </compilerPlugins>
-          <pluginOptions>
-            <option>all-open:annotation=io.micronaut.aop.Around</option>
-          </pluginOptions>
-        </configuration>
-        <executions>
-          <execution>
-            <id>kapt</id>
-            <goals>
-              <goal>kapt</goal>
-            </goals>
-            <configuration>
-              <sourceDirs>
-                <sourceDir>${project.basedir}/src/main/kotlin</sourceDir>
-              </sourceDirs>
-              <annotationProcessorPaths combine.children="append">
-                <annotationProcessorPath>
-                  <groupId>io.micronaut</groupId>
-                  <artifactId>micronaut-inject-java</artifactId>
-                  <version>${micronaut.version}</version>
-                </annotationProcessorPath>
-                <annotationProcessorPath>
-                  <groupId>io.micronaut</groupId>
-                  <artifactId>micronaut-validation</artifactId>
-                  <version>${micronaut.version}</version>
-                </annotationProcessorPath>
-                <annotationProcessorPath>
-                  <groupId>io.micronaut</groupId>
-                  <artifactId>micronaut-graal</artifactId>
-                  <version>${micronaut.version}</version>
-                </annotationProcessorPath>
-                <annotationProcessorPath>
-                  <groupId>io.micronaut.data</groupId>
-                  <artifactId>micronaut-data-processor</artifactId>
-                  <version>${micronaut.data.version}</version>
-                </annotationProcessorPath>
-              </annotationProcessorPaths>
-              <annotationProcessorArgs>
-                <annotationProcessorArg>micronaut.processing.group=com.xavierbouclet.nativeapi</annotationProcessorArg>
-                <annotationProcessorArg>micronaut.processing.module=nativeMicronautApi</annotationProcessorArg>
-              </annotationProcessorArgs>
-            </configuration>
-          </execution>
-          <execution>
-            <id>compile</id>
-            <goals>
-              <goal>compile</goal>
-            </goals>
-            <configuration>
-              <sourceDirs>
-                <sourceDir>${project.basedir}/src/main/kotlin</sourceDir>
-              </sourceDirs>
-            </configuration>
-          </execution>
-          <execution>
-            <id>test-kapt</id>
-            <goals>
-              <goal>test-kapt</goal>
-            </goals>
-            <configuration>
-              <sourceDirs>
-                <sourceDir>${project.basedir}/src/test/kotlin</sourceDir>
-              </sourceDirs>
-              <annotationProcessorPaths>
-                <annotationProcessorPath>
-                  <groupId>io.micronaut</groupId>
-                  <artifactId>micronaut-inject-java</artifactId>
-                  <version>${micronaut.version}</version>
-                </annotationProcessorPath>
-                <annotationProcessorPath>
-                  <groupId>io.micronaut</groupId>
-                  <artifactId>micronaut-validation</artifactId>
-                  <version>${micronaut.version}</version>
-                </annotationProcessorPath>
-                <annotationProcessorPath>
-                  <groupId>io.micronaut</groupId>
-                  <artifactId>micronaut-graal</artifactId>
-                  <version>${micronaut.version}</version>
-                </annotationProcessorPath>
-                <annotationProcessorPath>
-                  <groupId>io.micronaut.data</groupId>
-                  <artifactId>micronaut-data-processor</artifactId>
-                  <version>${micronaut.data.version}</version>
-                </annotationProcessorPath>
-              </annotationProcessorPaths>
-            </configuration>
-          </execution>
-          <execution>
-            <id>test-compile</id>
-            <goals>
-              <goal>test-compile</goal>
-            </goals>
-            <configuration>
-              <sourceDirs>
-                <sourceDir>${project.basedir}/src/test/kotlin</sourceDir>
-                <sourceDir>${project.basedir}/target/generated-sources/kapt/test</sourceDir>
-              </sourceDirs>
-            </configuration>
-          </execution>
-        </executions>
-        <dependencies>
-          <dependency>
-            <groupId>org.jetbrains.kotlin</groupId>
-            <artifactId>kotlin-maven-allopen</artifactId>
-            <version>${kotlinVersion}</version>
-          </dependency>
-        </dependencies>
-      </plugin>
-      <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
         <configuration>
-          <proc>none</proc>
-          <source>${jdk.version}</source>
-          <target>${jdk.version}</target>
+          <!-- Uncomment to enable incremental compilation -->
+          <!-- <useIncrementalCompilation>false</useIncrementalCompilation> -->
+
+          <annotationProcessorPaths combine.children="append">
+            <annotationProcessorPath>
+              <groupId>io.micronaut</groupId>
+              <artifactId>micronaut-inject-java</artifactId>
+              <version>${micronaut.version}</version>
+            </annotationProcessorPath>
+            <annotationProcessorPath>
+              <groupId>io.micronaut</groupId>
+              <artifactId>micronaut-validation</artifactId>
+              <version>${micronaut.version}</version>
+            </annotationProcessorPath>
+            <annotationProcessorPath>
+              <groupId>io.micronaut</groupId>
+              <artifactId>micronaut-graal</artifactId>
+              <version>${micronaut.version}</version>
+            </annotationProcessorPath>
+            <annotationProcessorPath>
+              <groupId>io.micronaut.data</groupId>
+              <artifactId>micronaut-data-processor</artifactId>
+              <version>${micronaut.data.version}</version>
+            </annotationProcessorPath>
+          </annotationProcessorPaths>
+          <compilerArgs>
+            <arg>-Amicronaut.processing.group=com.xavierbouclet.nativeapi</arg>
+            <arg>-Amicronaut.processing.module=nativeMicronautApi</arg>
+          </compilerArgs>
         </configuration>
         <executions>
           <execution>

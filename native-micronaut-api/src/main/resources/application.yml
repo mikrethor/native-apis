@@ -9,6 +9,16 @@ datasources:
     password: ${DATASOURCE_PASSWORD}
     schema-generate: CREATE_DROP
     dialect: POSTGRES
-jpa.default.properties.hibernate.hbm2ddl.auto: update
+jpa:
+  default:
+    entity-scan:
+      packages: 'com.xavierbouclet.nativeapi'
+    properties:
+      hibernate:
+        hbm2ddl:
+          auto: update
+    compile-time-hibernate-proxies: true
+
+
 
 
