@@ -45,5 +45,3 @@ INSERT INTO actor_movie_mapping (actor_id, movie_id) VALUES ('9376cfa9-b7f2-4519
 INSERT INTO actor_movie_mapping (actor_id, movie_id) VALUES ('9376cfa9-b7f2-4519-82b7-8f3b9248ef24', '4ce61940-dc8c-421d-84e0-0ebeecff980d');
 INSERT INTO actor_movie_mapping (actor_id, movie_id) VALUES ('b8b3564f-89f3-405f-859d-e4d5e54617d8', '4ce61940-dc8c-421d-84e0-0ebeecff980d');
 INSERT INTO actor_movie_mapping (actor_id, movie_id) VALUES ('179d3230-9a7f-4d92-b04a-f1b1d164058d', '4ce61940-dc8c-421d-84e0-0ebeecff980d');
-
-
