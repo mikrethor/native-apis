@@ -39,7 +39,6 @@ class EndToEndTest {
     @Test
     void postAnActor() {
         var actor = new Actor();
-        actor.setId(UUID.randomUUID());
         actor.setFullName("David Sandberg");
 
         var headers = new HttpHeaders();
@@ -55,7 +54,6 @@ class EndToEndTest {
     @Test
     void deleteAnActor() {
         var actor = new Actor();
-        actor.setId(UUID.randomUUID());
         actor.setFullName("David Hasselhoff");
 
         var headers = new HttpHeaders();
@@ -76,7 +74,6 @@ class EndToEndTest {
                 response2
                         .getBody()
                         .substring(response2.getBody().indexOf("\"")+1,response2.getBody().lastIndexOf("\""))
-                //.replace("\"")
         );
     }
 
@@ -85,7 +82,6 @@ class EndToEndTest {
     @Test
     void postAMovie() {
         var movie = new Movie();
-        movie.setId(UUID.randomUUID());
         movie.setTitle("Kung Fury");
         movie.setYear(2015);
 
@@ -102,9 +98,8 @@ class EndToEndTest {
     @Test
      void deleteAMovie() {
         var movie = new Movie();
-        movie.setId(UUID.randomUUID());
         movie.setTitle("Kung Fury 2");
-        movie.setYear(2020);
+        movie.setYear(2022);
 
         var headers = new HttpHeaders();
         var requestEntity = new HttpEntity<>(movie, headers);
@@ -154,7 +149,6 @@ class EndToEndTest {
 
         var actorId = responseActor.getBody().getId();
         var movieId = response.getBody().getId();
-
 
         var headersActorInMovie = new HttpHeaders();
         var requestEntityActorInMovie = new HttpEntity<>(actor, headersActorInMovie);
