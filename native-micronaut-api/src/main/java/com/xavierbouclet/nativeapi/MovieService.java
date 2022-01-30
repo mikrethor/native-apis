@@ -14,10 +14,6 @@ record MovieService(
         return repository.findAll();
     }
 
-//    public list(title: String): List<Movie> {
-//        return repository.findByTitle(title)
-//    }
-
     public Movie add(Movie movie) {
         return repository.save(movie);
     }
