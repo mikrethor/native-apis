@@ -22,4 +22,10 @@ export DATASOURCE_URL=jdbc:postgresql://localhost:5432/compose-postgres
 export DATASOURCE_USERNAME=compose-postgres
 export DATASOURCE_PASSWORD=compose-postgres
 
+mn create-app com.xavierbouclet.native-micronaut-api --build=maven --lang=java --java-version=17 -f=graalvm,assertj,postgres,logback,data-jpa
 
+ add problem zalando
+
+./mvnw clean package
+
+./mvnw clean package -Dpackaging=native-image

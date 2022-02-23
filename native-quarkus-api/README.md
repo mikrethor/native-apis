@@ -48,3 +48,33 @@ If you want to learn more about building native executables, please consult http
 <p>A Hello World RESTEasy resource</p>
 
 Guide: https://quarkus.io/guides/rest-json
+
+
+# Create a project
+
+`quarkus create app com.xavierbouclet:native-quarkus-api:0.0.1-SNAPSHOT --maven --java=17 -x=quarkus-resteasy-jackson,quarkus-jdbc-postgresql,quarkus-hibernate-orm-panache`
+
+Add the following dependencies :
+````
+<dependency>
+    <groupId>org.zalando</groupId>
+    <artifactId>problem</artifactId>
+    <version>0.27.1</version>
+</dependency>
+<dependency>
+    <groupId>org.testcontainers</groupId>
+    <artifactId>junit-jupiter</artifactId>
+</dependency>
+<dependency>
+    <groupId>org.testcontainers</groupId>
+    <artifactId>postgresql</artifactId>
+    <scope>test</scope>
+</dependency>
+<dependency>
+    <groupId>org.assertj</groupId>
+    <artifactId>assertj-core</artifactId>
+    <scope>test</scope>
+</dependency>
+```
+
+ export  GRAALVM_HOME=~/.sdkman/candidates/java/22.0.0.2.r17-grl/

@@ -96,3 +96,19 @@ Barbarianna
 openapi after first code
 
 https://www.mscharhag.com/api-design/rest-many-to-many-relations
+
+[source, sh]
+----
+spring init \
+     -b=2.6.3 \
+     -g=com.xavierbouclet.nativeapi \
+     -a=native-spring-api \
+     --name=JvmApi \
+     -j=17 \
+     -d=web,data-jpa,postgresql,testcontainers,native \
+     --build=maven native-spring-api
+---
+
+add zalando problem
+
+déplacer le aot dans native
