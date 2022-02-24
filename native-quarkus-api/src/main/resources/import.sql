@@ -40,6 +40,7 @@ INSERT INTO movie (id, title, year) VALUES ('4ce61940-dc8c-421d-84e0-0ebeecff980
 
 --Kung Fury
 INSERT INTO actor_movie_mapping (actor_id, movie_id) VALUES ('9376cfa9-b7f2-4519-82b7-8f3b9248ef24', 'a2c31765-8958-4862-9675-b5f853e6e299');
+INSERT INTO actor_movie_mapping (actor_id, movie_id) VALUES ('28de2c7a-ac2b-4a7c-88d8-d637ad3e027a', 'a2c31765-8958-4862-9675-b5f853e6e299');
 
 --Kung Fury 2
 INSERT INTO actor_movie_mapping (actor_id, movie_id) VALUES ('9376cfa9-b7f2-4519-82b7-8f3b9248ef24', '4ce61940-dc8c-421d-84e0-0ebeecff980d');
