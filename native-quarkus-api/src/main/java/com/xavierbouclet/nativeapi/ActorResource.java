@@ -21,7 +21,7 @@ public class ActorResource {
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public List<Actor> list() {
+    public List<Actor> list(){
         return service.list();
     }
 

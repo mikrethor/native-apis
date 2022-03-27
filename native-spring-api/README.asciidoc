@@ -10,7 +10,7 @@ export JAVA_HOME=~/.sdkman/candidates/java/21.0.0.r11-grl
 mvn spring-boot:build-image -Pnative
 
 
-docker run --name some-postgres -e POSTGRES_USER=compose-postgres -e POSTGRES_PASSWORD=compose-postgres -e POSTGRES_DB=compose-postgres -p 5432:5432 -d postgres
+docker run --name movie-postgres -e POSTGRES_USER=movie-postgres -e POSTGRES_PASSWORD=movie-postgres -e POSTGRES_DB=movie-postgres -p 5432:5432 -d postgres
 
 https://linux.die.net/man/1/upx
 

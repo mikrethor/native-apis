@@ -3,31 +3,26 @@ package com.xavierbouclet.nativeapi;
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
-import org.hibernate.annotations.GenericGenerator;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.annotation.Transient;
+import org.springframework.data.relational.core.mapping.MappedCollection;
+import org.springframework.data.relational.core.mapping.Table;
 
 import java.util.Set;
 import java.util.UUID;
-import javax.persistence.*;
 
-@Entity
+@Table("ACTOR")
 @JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
 public class Actor {
 
-    @javax.persistence.Id
     @Id
-    @GeneratedValue(generator = "uuid")
-    @GenericGenerator(name = "uuid", strategy = "uuid2")
-    private UUID id = null;
+    private UUID id;
 
     private String fullName = "";
 
     @JsonIgnoreProperties("actors")
-    @ManyToMany
-    @JoinTable(
-            name = "actor_movie_mapping",
-            joinColumns = @JoinColumn(name = "actor_id", referencedColumnName = "id"),
-            inverseJoinColumns = @JoinColumn(name = "movie_id", referencedColumnName = "id"))
+    @MappedCollection(keyColumn = "movie_id")
+    @Transient
     private Set<Movie> movies;
 
     public UUID getId() {

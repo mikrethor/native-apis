@@ -1,7 +1,6 @@
 package com.xavierbouclet.nativeapi;
 
 import org.junit.jupiter.api.extension.AfterAllCallback;
-import org.junit.jupiter.api.extension.BeforeAllCallback;
 import org.junit.jupiter.api.extension.ExtensionContext;
 import org.springframework.boot.test.util.TestPropertyValues;
 import org.springframework.context.ApplicationContextInitializer;
@@ -24,6 +23,8 @@ public class PostgresSQLExtension implements AfterAllCallback {
         postgresSQLServer.stop();
     }
 
+
+
     public static class Initializer implements ApplicationContextInitializer<ConfigurableApplicationContext> {
 
         public Initializer() {
@@ -32,11 +33,9 @@ public class PostgresSQLExtension implements AfterAllCallback {
         @Override
         public void initialize(ConfigurableApplicationContext configurableApplicationContext) {
             TestPropertyValues.of(
-                    "spring.datasource.url=" + postgresSQLServer.getJdbcUrl(),
-                    "spring.datasource.username=" + postgresSQLServer.getUsername(),
-                    "spring.datasource.password=" + postgresSQLServer.getPassword(),
-                    "spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQL10Dialect",
-                    "spring.jpa.hibernate.ddl-auto=update"
+                    "spring.r2dbc.url=" + postgresSQLServer.getJdbcUrl().replace("jdbc", "r2dbc"),
+                    "spring.r2dbc.username=" + postgresSQLServer.getUsername(),
+                    "spring.r2dbc.password=" + postgresSQLServer.getPassword()
             ).applyTo(configurableApplicationContext.getEnvironment());
         }
 

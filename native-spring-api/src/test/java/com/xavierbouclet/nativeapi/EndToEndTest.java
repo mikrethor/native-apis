@@ -5,35 +5,23 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.web.client.TestRestTemplate;
-import org.springframework.http.HttpEntity;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpMethod;
-import org.springframework.http.HttpStatus;
+import org.springframework.context.annotation.Import;
 import org.springframework.test.context.ContextConfiguration;
-import org.testcontainers.containers.PostgreSQLContainer;
-
-import java.util.UUID;
+import org.springframework.test.web.reactive.server.WebTestClient;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+@Import(R2dbcConfig.class)
 @ExtendWith(PostgresSQLExtension.class)
 @ContextConfiguration(initializers = PostgresSQLExtension.Initializer.class)
 class EndToEndTest {
 
-    private static PostgreSQLContainer<?> postgresSQLServer =  new PostgreSQLContainer<>("postgres:14.1")
-            .withDatabaseName("integration-tests-db")
-            .withUsername("sa")
-            .withPassword("sa");
 
-    static {
-        postgresSQLServer.start();
-    }
 
     @Autowired
-    private TestRestTemplate restTemplate;
+    private WebTestClient webTestClient;
 
     @DisplayName("Post an actor should be correct")
     @Test
@@ -41,13 +29,17 @@ class EndToEndTest {
         var actor = new Actor();
         actor.setFullName("David Sandberg");
 
-        var headers = new HttpHeaders();
-        var requestEntity = new HttpEntity<>(actor, headers);
-        var response = restTemplate.exchange("/actors", HttpMethod.POST, requestEntity, Actor.class);
+        var response = webTestClient
+                .post()
+                .uri("/actors")
+                .bodyValue(actor)
+                .exchange()
+                .expectStatus().isCreated()
+                .returnResult(Actor.class);
 
-        assertEquals(HttpStatus.CREATED, response.getStatusCode());
-        assertNotNull(response.getBody());
-        assertEquals(actor.getFullName(), response.getBody().getFullName());
+        var resultActor = response.getResponseBody().blockFirst();
+        assertNotNull(resultActor);
+        assertEquals(actor.getFullName(), resultActor.getFullName());
     }
 
     @DisplayName("Delete an actor should be correct")
@@ -56,25 +48,24 @@ class EndToEndTest {
         var actor = new Actor();
         actor.setFullName("David Hasselhoff");
 
-        var headers = new HttpHeaders();
-        var requestEntity = new HttpEntity<>(actor, headers);
-        var response = restTemplate.exchange("/actors", HttpMethod.POST, requestEntity, Actor.class);
+        var response =  webTestClient.post()
+                .uri("/actors")
+                .bodyValue(actor)
+                .exchange()
+                .expectStatus().isCreated()
+                .returnResult(Actor.class);
 
-        assertEquals(HttpStatus.CREATED, response.getStatusCode());
-        assertNotNull(response.getBody());
-        assertEquals(actor.getFullName(), response.getBody().getFullName());
+        var resultActor = response.getResponseBody().blockFirst();
+        assertNotNull(resultActor);
+        assertEquals(actor.getFullName(), resultActor.getFullName());
 
-        var response2 = restTemplate.exchange("/actors/" + response.getBody().getId(), HttpMethod.DELETE, requestEntity, String.class);
+        var response2 = webTestClient.delete()
+                .uri("/actors/"+resultActor.getId())
+                .exchange()
+                .expectStatus().isOk()
+                .returnResult(Void.class);
 
-        assertNotNull(response2.getBody());
-        assertEquals(response
-                        .getBody()
-                        .getId()
-                        .toString(),
-                response2
-                        .getBody()
-                        .substring(response2.getBody().indexOf("\"")+1,response2.getBody().lastIndexOf("\""))
-        );
+        assertNotNull(response2);
     }
 
 
@@ -85,41 +76,46 @@ class EndToEndTest {
         movie.setTitle("Kung Fury");
         movie.setYear(2015);
 
-        var headers = new HttpHeaders();
-        var requestEntity = new HttpEntity<>(movie, headers);
-        var response = restTemplate.exchange("/movies", HttpMethod.POST, requestEntity, Movie.class);
+        var response = webTestClient
+                .post()
+                .uri("/movies")
+                .bodyValue(movie)
+                .exchange()
+                .expectStatus().isCreated()
+                .returnResult(Movie.class);
 
-        assertEquals(HttpStatus.CREATED, response.getStatusCode());
-        assertNotNull(response.getBody());
-        assertEquals(movie.getTitle(), response.getBody().getTitle());
+        var resultMovie = response.getResponseBody().blockFirst();
+        assertNotNull(resultMovie);
+        assertEquals(movie.getTitle(), resultMovie.getTitle());
     }
 
     @DisplayName("Delete a movie should be correct")
     @Test
-     void deleteAMovie() {
+    void deleteAMovie() {
         var movie = new Movie();
         movie.setTitle("Kung Fury 2");
         movie.setYear(2022);
 
-        var headers = new HttpHeaders();
-        var requestEntity = new HttpEntity<>(movie, headers);
-        var response = restTemplate.exchange("/movies", HttpMethod.POST, requestEntity, Movie.class);
 
-        assertEquals(HttpStatus.CREATED, response.getStatusCode());
-        assertNotNull(response.getBody());
-        assertEquals(movie.getTitle(), response.getBody().getTitle());
+        var response = webTestClient
+                .post()
+                .uri("/movies")
+                .bodyValue(movie)
+                .exchange()
+                .expectStatus().isCreated()
+                .returnResult(Movie.class);
 
-        var response2 = restTemplate.exchange("/movies/" + response.getBody().getId(), HttpMethod.DELETE, requestEntity, String.class);
+        var resultMovie = response.getResponseBody().blockFirst();
+        assertNotNull(resultMovie);
+        assertEquals(movie.getTitle(), resultMovie.getTitle());
 
-        assertNotNull(response2.getBody());
-        assertEquals(response
-                        .getBody()
-                        .getId()
-                        .toString(),
-                response2
-                        .getBody()
-                        .substring(response2.getBody().indexOf("\"")+1,response2.getBody().lastIndexOf("\""))
-        );
+        var response2 = webTestClient.delete()
+                .uri("/movies/"+resultMovie.getId())
+                .exchange()
+                .expectStatus().isOk()
+                .returnResult(Void.class);
+
+        assertNotNull(response2);
     }
 
     @DisplayName("Add an actor to a movie should be correct")
@@ -128,40 +124,45 @@ class EndToEndTest {
         var movie = new Movie();
         movie.setTitle("Kung Fury");
 
-        var headers = new HttpHeaders();
-        var requestEntity = new HttpEntity<>(movie, headers);
-        var response = restTemplate.exchange("/movies", HttpMethod.POST, requestEntity, Movie.class);
+        var response = webTestClient
+                .post()
+                .uri("/movies")
+                .bodyValue(movie)
+                .exchange()
+                .expectStatus().isCreated()
+                .returnResult(Movie.class);
 
-        assertEquals(HttpStatus.CREATED, response.getStatusCode());
-        assertNotNull(response.getBody());
-        assertEquals(movie.getTitle(), response.getBody().getTitle());
+        var resultMovie = response.getResponseBody().blockFirst();
+        assertNotNull(resultMovie);
+        assertEquals(movie.getTitle(), resultMovie.getTitle());
 
         var actor = new Actor();
         actor.setFullName("Jorma Taccone");
 
-        var headersActor = new HttpHeaders();
-        var requestEntityActor = new HttpEntity<>(actor, headersActor);
-        var responseActor = restTemplate.exchange("/actors", HttpMethod.POST, requestEntityActor, Actor.class);
+        var responseActor =  webTestClient.post()
+                .uri("/actors")
+                .bodyValue(actor)
+                .exchange()
+                .expectStatus().isCreated()
+                .returnResult(Actor.class);
 
-        assertEquals(HttpStatus.CREATED, responseActor.getStatusCode());
-        assertNotNull(responseActor.getBody());
-        assertEquals(actor.getFullName(), responseActor.getBody().getFullName());
+        var resultActor = responseActor.getResponseBody().blockFirst();
 
-        var actorId = responseActor.getBody().getId();
-        var movieId = response.getBody().getId();
+        var actorId = resultActor.getId();
+        var movieId = resultMovie.getId();
 
-        var headersActorInMovie = new HttpHeaders();
-        var requestEntityActorInMovie = new HttpEntity<>(actor, headersActorInMovie);
-        var responseActorActorInMovie = restTemplate.exchange("/movies/"+movieId+"/actors/"+actorId, HttpMethod.PUT, requestEntityActorInMovie, Movie.class);
 
-        assertEquals(HttpStatus.ACCEPTED, responseActorActorInMovie.getStatusCode());
-        assertNotNull(responseActorActorInMovie.getBody());
-        assertEquals(movie.getTitle(), responseActorActorInMovie.getBody().getTitle());
-        assertEquals(1, responseActorActorInMovie.getBody().getActors().size());
+        var responseActorActorInMovie =
+                webTestClient.put()
+                        .uri("/movies/" + movieId + "/actors/" + actorId)
+                        .exchange()
+                        .expectStatus().isAccepted()
+                        .returnResult(ActorMovie.class);
 
-        var actorInMovie = responseActorActorInMovie.getBody().getActors().get(0);
+        var resultActorMovie = responseActorActorInMovie.getResponseBody().blockFirst();
 
-        assertEquals(actorId, actorInMovie.getId());
-        assertEquals(actor.getFullName(), actorInMovie.getFullName());
+        assertNotNull(resultActorMovie);
+        assertEquals(resultMovie.getId(), resultActorMovie.getMovieId());
+        assertEquals(resultActor.getId(), resultActorMovie.getActorId());
     }
 }

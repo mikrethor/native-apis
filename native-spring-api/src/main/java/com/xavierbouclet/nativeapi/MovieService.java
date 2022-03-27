@@ -1,56 +1,52 @@
 package com.xavierbouclet.nativeapi;
 
-import org.springframework.stereotype.Service;
+import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
 
-import java.util.List;
 import java.util.UUID;
 
-@Service
+import static java.util.Set.copyOf;
+
 record MovieService(
         MovieRepository repository,
-        ActorRepository actorRepository
+        ActorRepository actorRepository,
+        ActorMovieRepository actorMovieRepository
 ) {
 
-
-    public List<Movie> list() {
-        return repository.findAll();
+    public Flux<Movie> list() {
+        return repository.findAll().flatMap(movie -> Mono.just(movie).zipWith(actorRepository.findActorsByMovieId(movie.getId()).collectList())
+                .map(result -> {
+                    result.getT1().setActors(copyOf(result.getT2()));
+                    return result.getT1();
+                }));
     }
 
-//    public list(title: String): List<Movie> {
-//        return repository.findByTitle(title)
-//    }
-
-    public Movie add(Movie movie) {
+    public Mono<Movie> add(Movie movie) {
         return repository.save(movie);
     }
 
-    public Movie modify(Movie movie) {
+    public Mono<Movie> modify(Movie movie) {
         return repository.save(movie);
     }
 
-    public UUID delete(UUID id) {
-        repository.deleteById(id);
-        return id;
+    public Mono<UUID> delete(UUID id) {
+        return repository.deleteById(id).map(v -> id);
     }
 
-    public Movie addActorToMovie(UUID id, UUID idActor) {
-        var movie = repository.findById(id).get();
-        var actor = actorRepository.findById(idActor).get();
-        movie.getActors().add(actor);
-        actor.getMovies().add(movie);
-        return repository.save(movie);
+    public Mono<Movie> get(UUID id) {
+        return repository.findById(id).zipWith(actorRepository.findActorsByMovieId(id).collectList())
+                .map(result -> {
+                    result.getT1().setActors(copyOf(result.getT2()));
+                    return result.getT1();
+                });
     }
 
-    public Movie get(UUID id) {
-        return repository.findById(id).get();
+    public Mono<ActorMovie> addActorToMovie(UUID id, UUID actorId) {
+        return actorMovieRepository.save(new ActorMovie(actorId,id));
     }
 
-    public Movie removeActorFromMovie(UUID id, UUID idActor) {
-        var movie = repository.findById(id).get();
-        var actor = actorRepository.findById(idActor).get();
-        movie.getActors().remove(actor);
-        actor.getMovies().remove(movie);
-        return repository.save(movie);
+    public Mono<Void> removeActorFromMovie(UUID id, UUID actorId) {
+        return actorMovieRepository.deleteByMovieIdAndActorId(id, actorId);
     }
 
 }
