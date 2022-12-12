@@ -1,11 +1,13 @@
 package com.xavierbouclet.nativeapi;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.boot.context.properties.bind.DefaultValue;
 
 import java.util.Objects;
 
-@ConfigurationProperties(prefix = "spring.r2dbc")
-public final class R2dbcProperties {
+//@ConfigurationProperties(prefix = "spring.r2dbc")
+public final  class R2dbcProperties {
+
     private final String url;
     private final String username;
     private final String password;

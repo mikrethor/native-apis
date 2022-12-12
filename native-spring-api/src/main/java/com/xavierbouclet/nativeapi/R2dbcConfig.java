@@ -17,10 +17,13 @@ import org.springframework.r2dbc.core.DatabaseClient;
 class R2dbcConfig {
 
     @Bean
+    public R2dbcProperties r2dbcProperties() {
+        return new R2dbcProperties("r2dbc:postgresql://localhost:5432/movie-postgres", "movie-postgres", "movie-postgres");
+    }
+
+    @Bean
     public ConnectionFactory connectionFactory(R2dbcProperties properties) {
-        if (properties.url() == null && properties.username() == null && properties.password() == null) {
-            properties = new R2dbcProperties("r2dbc:postgresql://localhost:5432/movie-postgres", "movie-postgres", "movie-postgres");
-        }
+
 
         return ConnectionFactoryBuilder.withUrl(properties.url()).username(properties.username()).password(properties.password()).build();
     }

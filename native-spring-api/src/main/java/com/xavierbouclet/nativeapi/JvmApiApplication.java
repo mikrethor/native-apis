@@ -133,7 +133,7 @@ import org.springframework.context.annotation.Import;
 
 //@EnableJpaRepositories(basePackageClasses = [ActorRepository.class, MovieRepository.class])
 @Import(value = {R2dbcConfig.class, AppConfig.class, RoutesConfig.class})
-@EnableConfigurationProperties(R2dbcProperties.class)
+//@EnableConfigurationProperties(R2dbcProperties.class)
 @SpringBootApplication(proxyBeanMethods = false
         ,
         exclude = {
