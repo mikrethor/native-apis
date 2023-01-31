@@ -1,10 +1,9 @@
 package com.xavierbouclet.nativeapi
 
 import org.springframework.http.HttpStatus
+import org.springframework.http.ProblemDetail
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
-import org.zalando.problem.Problem
-import org.zalando.problem.Status
 import java.net.URI
 import java.util.*
 
@@ -29,12 +28,11 @@ class MovieController(val service: MovieService) {
         if (title.isNotBlank() && ("Kung Fury" == title || "Kung Fury 2" == title)) {
             return ResponseEntity.status(HttpStatus.CREATED).body(service.add(movie))
         }
-        val problem = Problem.builder()
-                .withType(URI.create("https://mymovieapp.com/probs/cant-add-other-movie-kung-fury"))
-                .withTitle("Kung Fury movies are the only ones")
-                .withDetail("How dare you add this movie ? Only Kung Fury movies are worthy.")
-                .withStatus(Status.FORBIDDEN)
-                .build()
+        var problem = ProblemDetail.forStatusAndDetail(HttpStatus.FORBIDDEN, "How dare you add this movie ? Only Kung Fury movies are worthy.")
+        problem.title = "Kung Fury movies are the only ones"
+        problem.detail = "How dare you add this movie ? Only Kung Fury movies are worthy."
+        problem.type = URI.create("https://mymovieapp.com/probs/cant-add-other-movie-kung-fury")
+
         return ResponseEntity.status(HttpStatus.FORBIDDEN).body(problem)
     }
 

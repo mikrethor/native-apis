@@ -14,15 +14,19 @@ class PostgresSQLExtension : BeforeAllCallback, AfterAllCallback {
     internal class SpecifiedPostgresSQLContainer(imageName: String) : PostgreSQLContainer<SpecifiedPostgresSQLContainer>(imageName)
 
     companion object {
-        private val postgresSQLServer = SpecifiedPostgresSQLContainer("postgres:14.1")
-                .withDatabaseName("integration-tests-db")
-                .withUsername("sa")
-                .withPassword("sa")
+        private val postgresSQLServer = SpecifiedPostgresSQLContainer("postgres:15.1")
+            .withDatabaseName("integration")
+            .withUsername("sa")
+            .withPassword("sa")
+            .waitingFor(
+                TestContainerPostgresSQLWaitStrategy()
+            )
 
     }
 
     override fun beforeAll(p0: ExtensionContext?) {
         postgresSQLServer.start()
+        println("bip")
     }
 
     override fun afterAll(p0: ExtensionContext?) {
@@ -32,11 +36,11 @@ class PostgresSQLExtension : BeforeAllCallback, AfterAllCallback {
     internal class Initializer : ApplicationContextInitializer<ConfigurableApplicationContext> {
         override fun initialize(configurableApplicationContext: ConfigurableApplicationContext) {
             TestPropertyValues.of(
-                    "spring.datasource.url=" + postgresSQLServer.jdbcUrl,
-                    "spring.datasource.username=" + postgresSQLServer.username,
-                    "spring.datasource.password=" + postgresSQLServer.password,
-                    "spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQL10Dialect",
-                     "spring.jpa.hibernate.ddl-auto=update"
+                "spring.datasource.url=" + postgresSQLServer.jdbcUrl,
+                "spring.datasource.username=" + postgresSQLServer.username,
+                "spring.datasource.password=" + postgresSQLServer.password,
+                "spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect",
+                "spring.jpa.hibernate.ddl-auto=update"
             ).applyTo(configurableApplicationContext.environment)
         }
     }
