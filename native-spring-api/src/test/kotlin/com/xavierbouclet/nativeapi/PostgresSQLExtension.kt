@@ -26,7 +26,7 @@ class PostgresSQLExtension : BeforeAllCallback, AfterAllCallback {
 
     override fun beforeAll(p0: ExtensionContext?) {
         postgresSQLServer.start()
-        println("bip")
+        println("Postgres has started")
     }
 
     override fun afterAll(p0: ExtensionContext?) {
@@ -36,9 +36,9 @@ class PostgresSQLExtension : BeforeAllCallback, AfterAllCallback {
     internal class Initializer : ApplicationContextInitializer<ConfigurableApplicationContext> {
         override fun initialize(configurableApplicationContext: ConfigurableApplicationContext) {
             TestPropertyValues.of(
-                "spring.datasource.url=" + postgresSQLServer.jdbcUrl,
-                "spring.datasource.username=" + postgresSQLServer.username,
-                "spring.datasource.password=" + postgresSQLServer.password,
+                "spring.datasource.url=${postgresSQLServer.jdbcUrl}",
+                "spring.datasource.username=${postgresSQLServer.username}",
+                "spring.datasource.password=${postgresSQLServer.password}",
                 "spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect",
                 "spring.jpa.hibernate.ddl-auto=update"
             ).applyTo(configurableApplicationContext.environment)
