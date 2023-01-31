@@ -6,13 +6,13 @@ import com.fasterxml.jackson.annotation.ObjectIdGenerators
 import org.hibernate.annotations.GenericGenerator
 import org.springframework.data.annotation.Id
 import java.util.UUID
-import javax.persistence.*
+import jakarta.persistence.*
 
 @Entity
 @JsonIdentityInfo(generator= ObjectIdGenerators.PropertyGenerator::class, property="id")
 class Actor {
 
-    @javax.persistence.Id
+    @jakarta.persistence.Id
     @Id
     @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "uuid2")

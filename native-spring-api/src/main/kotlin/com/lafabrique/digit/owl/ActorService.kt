@@ -1,20 +1,23 @@
 package com.lafabrique.digit.owl
 
+import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.data.repository.findByIdOrNull
-import org.springframework.stereotype.Component
+import org.springframework.stereotype.Service
 import java.util.*
 
-@Component
-class ActorService(val repository: ActorRepository, val movieRepository: MovieRepository) {
+@Service
+class ActorService(
+    @Autowired val repository: ActorRepository,
+    @Autowired val movieRepository: MovieRepository) {
 
     fun list(): MutableIterable<Actor> {
 
         return repository.findAll()
     }
 
-    fun list(title: String): List<Actor> {
-        return repository.findByFullName(title)
-    }
+//    fun list(title: String): List<Actor> {
+//        return repository.findByFullName(title)
+//    }
 
     fun add(actor: Actor): Actor {
         return repository.save(actor)
