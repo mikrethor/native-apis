@@ -8,7 +8,13 @@ import java.util.*;
 
 @RestController
 @RequestMapping("actors")
-record ActorController(ActorService service) {
+public class ActorController {
+
+    private final ActorService service;
+
+    public ActorController(ActorService service) {
+        this.service = service;
+    }
 
     @GetMapping
     public ResponseEntity<List<Actor>> list() {

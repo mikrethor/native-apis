@@ -12,7 +12,13 @@ import java.util.*;
 
 @RestController
 @RequestMapping("movies")
-record MovieController(MovieService service) {
+public class MovieController {
+
+    private final MovieService service;
+
+    public MovieController(MovieService service) {
+        this.service = service;
+    }
 
     @GetMapping
     public ResponseEntity<List<Movie>> list() {

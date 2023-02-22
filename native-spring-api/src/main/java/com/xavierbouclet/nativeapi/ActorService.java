@@ -6,7 +6,15 @@ import java.util.List;
 import java.util.UUID;
 
 @Service
-public record ActorService(ActorRepository repository, MovieRepository movieRepository) {
+public class ActorService {
+
+    private final ActorRepository repository;
+    private final MovieRepository movieRepository;
+
+    public ActorService(ActorRepository repository, MovieRepository movieRepository) {
+        this.repository = repository;
+        this.movieRepository = movieRepository;
+    }
 
     public List<Actor> list() {
 

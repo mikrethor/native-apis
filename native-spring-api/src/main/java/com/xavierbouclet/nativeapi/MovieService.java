@@ -6,11 +6,15 @@ import java.util.List;
 import java.util.UUID;
 
 @Service
-record MovieService(
-        MovieRepository repository,
-        ActorRepository actorRepository
-) {
+public class MovieService {
 
+    private final MovieRepository repository;
+    private final ActorRepository actorRepository;
+
+    public MovieService(MovieRepository repository, ActorRepository actorRepository) {
+        this.repository = repository;
+        this.actorRepository = actorRepository;
+    }
 
     public List<Movie> list() {
         return repository.findAll();
