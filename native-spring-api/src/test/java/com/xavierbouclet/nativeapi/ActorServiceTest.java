@@ -3,6 +3,7 @@ package com.xavierbouclet.nativeapi;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
 import org.springframework.boot.test.mock.mockito.MockBean;
 
@@ -18,9 +19,9 @@ public class ActorServiceTest {
      private ActorService actorService;
 
 
-    @MockBean
+    @Mock
     private ActorRepository actorRepository;
-    @MockBean
+    @Mock
     private MovieRepository movieRepository;
 
     @Before
